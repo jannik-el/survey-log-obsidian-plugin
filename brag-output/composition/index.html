@@ -292,6 +292,39 @@
         vertical-align: middle;
       }
 
+      /* side note beside the modal */
+      #sidenote {
+        position: absolute;
+        left: 1360px;
+        top: 430px;
+        width: 430px;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+      }
+      .sn-item {
+        position: relative;
+        padding-left: 28px;
+        font-size: 25px;
+        line-height: 1.45;
+        color: #99b0aa;
+        opacity: 0;
+      }
+      .sn-dot {
+        position: absolute;
+        left: 0;
+        top: 12px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #119da4;
+      }
+      .sn-item .mono-ref {
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 22px;
+        color: #8ed7db;
+      }
+
       /* note panel (payoff) */
       #notepanel {
         position: absolute;
@@ -554,6 +587,11 @@
           </div>
         </div>
 
+        <div id="sidenote">
+          <div class="sn-item" id="sn-loc"><span class="sn-dot"></span>Locations autocomplete from a plain <span class="mono-ref">locations.md</span> list in your vault</div>
+          <div class="sn-item" id="sn-note"><span class="sn-dot"></span>Notes autocomplete from your own entry history &mdash; scoped vault-wide or to the current note</div>
+        </div>
+
         <div id="notepanel">
           <div id="notecard">
             <div class="n-head">Survey 2026-07-12.md</div>
@@ -635,6 +673,8 @@
       <audio id="sfx-t5" src="assets/sfx/keypress-002.wav" data-start="10.3" data-duration="0.5" data-track-index="37" data-volume="0.55"></audio>
       <audio id="sfx-t6" src="assets/sfx/keypress-003.wav" data-start="10.5" data-duration="0.5" data-track-index="38" data-volume="0.55"></audio>
       <audio id="sfx-tab" src="assets/sfx/keypress-001.wav" data-start="10.55" data-duration="0.5" data-track-index="39" data-volume="0.5"></audio>
+      <audio id="sfx-sn1" src="assets/sfx/impactSoft_medium_000.ogg" data-start="11.15" data-duration="0.5" data-track-index="46" data-volume="0.3"></audio>
+      <audio id="sfx-sn2" src="assets/sfx/impactSoft_medium_000.ogg" data-start="13.1" data-duration="0.5" data-track-index="47" data-volume="0.3"></audio>
       <audio id="sfx-land" src="assets/sfx/impactBell_heavy_000.ogg" data-start="16.9" data-duration="1.2" data-track-index="24" data-volume="0.6"></audio>
 
       <audio id="sfx-q1" src="assets/sfx/keypress-003.wav" data-start="18.4" data-duration="0.6" data-track-index="25" data-volume="0.5"></audio>
@@ -744,6 +784,12 @@
       tl.set("#note-fill", { opacity: 1 }, 13.85);
       tl.to("#note-dd", { opacity: 0, y: -6, duration: 0.22, ease: "power2.in" }, 13.87);
       tl.set("#note-caret", { opacity: 0 }, 13.85);
+      // side note: facts appear beside the moments that show them
+      tl.to("#sn-loc", { opacity: 1, duration: 0.35, ease: "power2.out" }, 11.15);
+      tl.from("#sn-loc", { x: 18, duration: 0.35, ease: "power2.out" }, 11.15);
+      tl.to("#sn-note", { opacity: 1, duration: 0.35, ease: "power2.out" }, 13.1);
+      tl.from("#sn-note", { x: 18, duration: 0.35, ease: "power2.out" }, 13.1);
+      tl.to("#sidenote", { opacity: 0, duration: 0.3, ease: "power2.in" }, 15.4);
       // modal dips away, note panel takes over
       tl.to("#modal-wrap", { opacity: 0, y: 44, duration: 0.4, ease: "power2.in" }, 15.4);
       tl.to("#demo-title", { opacity: 0, duration: 0.3 }, 15.4);
