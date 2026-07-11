@@ -19,7 +19,7 @@ Press one hotkey, nudge the pre-filled timestamp with arrow keys if needed, pick
 - 14:31Z #Pier4
 ```
 
-# **▶ 26-second demo** ([watch with sound](https://github.com/jannik-el/survey-log-obsidian-plugin/blob/brag/brag-output/brag.mp4)):
+<!-- **▶ 26-second demo** ([watch with sound](https://github.com/jannik-el/survey-log-obsidian-plugin/blob/brag/brag-output/brag.mp4)): -->
 
 ![The entry modal: time pre-filled, location autocomplete open over a survey note](images/modal.png)
 
