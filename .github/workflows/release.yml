@@ -1,36 +1,67 @@
-name: Release Obsidian plugin
+name: Build and release
+
+# Every push to main produces a new plugin version:
+# tests + build must pass, then the patch version is bumped
+# (put "#minor" or "#major" in the commit message for bigger bumps),
+# committed back, tagged, and published as a GitHub release.
+# The very first run releases the current manifest version untouched.
 
 on:
   push:
-    tags:
-      - "*"
+    branches: [main]
 
 permissions:
   contents: write
 
+concurrency:
+  group: release
+  cancel-in-progress: false
+
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history so existing tags are visible
 
       - uses: actions/setup-node@v4
         with:
           node-version: "24"
 
-      - name: Build plugin
+      - name: Test and build
         run: |
           npm ci
           npm test
           npm run build
 
-      - name: Create draft release
+      - name: Bump version and tag
+        env:
+          HEAD_MSG: ${{ github.event.head_commit.message }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          current="$(node -p "require('./manifest.json').version")"
+          if git rev-parse -q --verify "refs/tags/$current" >/dev/null; then
+            case "$HEAD_MSG" in
+              *"#major"*) bump=major ;;
+              *"#minor"*) bump=minor ;;
+              *)          bump=patch ;;
+            esac
+            npm version "$bump" -m "chore(release): %s [skip ci]"
+          else
+            # First release: tag the version already in the manifest.
+            git tag "$current"
+          fi
+
+      - name: Push and publish release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          tag="${GITHUB_REF#refs/tags/}"
-          gh release create "$tag" \
-            --title="$tag" \
-            --draft \
+          git push origin main --follow-tags
+          version="$(node -p "require('./manifest.json').version")"
+          gh release create "$version" \
+            --title "$version" \
+            --generate-notes \
             main.js manifest.json styles.css

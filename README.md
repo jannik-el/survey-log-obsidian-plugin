@@ -10,7 +10,9 @@ Press one hotkey, nudge the pre-filled timestamp with arrow keys if needed, pick
 - 14:31Z #Pier4
 ```
 
-Locations are inserted as normal Obsidian tags, so every entry for a location is findable through the tag pane, search, or Dataview.
+Locations are inserted as normal Obsidian tags (default), so every entry for a location is findable through the tag pane, search, or Dataview — or as wikilinks (`[[Outer Breakwater]]`) if you prefer each location to be a note with a backlinks list of all its entries.
+
+Locations you type that aren't in your list yet are appended to the locations file automatically (toggleable).
 
 ## Usage
 
@@ -37,7 +39,9 @@ Locations are inserted as normal Obsidian tags, so every entry for a location is
 |---|---|---|
 | Timezone | UTC timestamps get a `Z` suffix (`13:47Z`) so entries are self-describing | UTC |
 | Locations file | Vault path of the note listing your locations | `locations.md` |
-| Tag prefix | Optional prefix, e.g. `loc/` → `#loc/Pier4` | *(empty)* |
+| Location style | Tag (`#JettyNorth`) or wikilink (`[[JettyNorth]]`) | Tag |
+| Tag prefix | Optional prefix, e.g. `loc/` → `#loc/Pier4` (tag style only) | *(empty)* |
+| Auto-add new locations | Append unknown locations to the locations file on insert | On |
 | Insert position | End of note, or at the cursor | End of note |
 | Note suggestions from | Whole vault or current note only | Whole vault |
 | Pre-fill last-used location | Reuse the previous location with a single Enter | On |
@@ -71,7 +75,7 @@ npm run build   # type check + production bundle
 
 Use a dedicated dev vault with the [Hot-Reload](https://github.com/pjeby/hot-reload) plugin for a fast feedback loop. Note that changes to `manifest.json` require an app restart; source changes only need a plugin reload.
 
-Releases: bump the version with `npm version patch|minor|major` (updates `manifest.json` and `versions.json` via `version-bump.mjs`), then push the tag — the GitHub Actions workflow builds and drafts a release with the plugin assets.
+Releases are fully automated: **every push to `main`** runs tests + build, bumps the patch version (`manifest.json`, `versions.json`, and `package.json` via `npm version` / `version-bump.mjs`), tags it, and publishes a GitHub release with `main.js`, `manifest.json`, and `styles.css` attached. For a minor or major bump instead, include `#minor` or `#major` in the commit message. Tags carry no `v` prefix (Obsidian convention, enforced via `.npmrc`).
 
 ## License
 
