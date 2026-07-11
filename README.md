@@ -43,7 +43,7 @@ Locations you type that aren't in your list yet are appended to the locations fi
 3. Open the note you want to log into, hit the hotkey, and:
    - **Time** — pre-filled with the current time (`HH:mm`). `↑`/`↓` = ±1 minute, `Shift+↑`/`↓` = ±10 minutes, or type over it. On mobile use the `+`/`−` buttons.
    - **Location** — pre-filled with your last-used location (fully selected: plain `Enter` reuses it, typing replaces it). Suggestions filter as you type; `↑`/`↓` + `Enter`/`Tab` to pick. Unknown locations are allowed and sanitized into valid tags.
-   - **Note** — optional free text. Suggestions come from note texts of your previous entries, most frequent first; `↓` to highlight one, `Enter` to accept it, `Enter` again to insert.
+   - **Note** — optional free text. Suggestions come from note texts of your previous entries, most frequent first; `↑`/`↓` to highlight, `Tab` or `Enter` to accept the suggestion (a second `Enter` then inserts), or `Esc` to dismiss the suggestions and keep what you typed.
    - `Ctrl/Cmd+Enter` inserts from anywhere in the modal; `Esc` cancels.
 
 ## Settings

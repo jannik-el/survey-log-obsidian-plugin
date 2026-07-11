@@ -46,6 +46,12 @@ class SuggestBox {
     return this.selected >= 0 ? (this.items[this.selected] ?? null) : null;
   }
 
+  /** Highlighted item, or the first item when nothing is highlighted. */
+  currentOrFirst(): string | null {
+    if (this.items.length === 0) return null;
+    return this.items[this.selected >= 0 ? this.selected : 0] ?? null;
+  }
+
   /** Move the highlight by delta, clamping into the list. */
   move(delta: number): void {
     if (this.items.length === 0) return;
@@ -209,19 +215,29 @@ export class SurveyLogModal extends Modal {
       if (evt.key === "ArrowDown" || evt.key === "ArrowUp") {
         evt.preventDefault();
         this.noteSuggest.move(evt.key === "ArrowDown" ? 1 : -1);
-      } else if (evt.key === "Enter") {
-        const picked = this.noteSuggest.current();
+      } else if (evt.key === "Tab" && !evt.ctrlKey && !evt.metaKey) {
+        // Tab accepts the suggestion (highlighted, else first) when the
+        // dropdown is open; otherwise let focus move on normally.
+        const picked = this.noteSuggest.currentOrFirst();
         if (picked !== null) {
+          evt.preventDefault();
           this.noteInput.value = picked;
           this.noteSuggest.hide();
         }
+      } else if (evt.key === "Enter") {
         if (evt.ctrlKey || evt.metaKey) {
           return; // bubbles to the Ctrl+Enter catch-all → submit
         }
         evt.preventDefault();
-        // Plain Enter: accept the highlighted suggestion (a second
-        // Enter then submits), or submit when nothing is highlighted.
-        if (picked === null) this.submit();
+        // Enter accepts the open suggestion (highlighted, else first),
+        // so a second Enter then submits; with no suggestion it submits.
+        const picked = this.noteSuggest.currentOrFirst();
+        if (picked !== null) {
+          this.noteInput.value = picked;
+          this.noteSuggest.hide();
+        } else {
+          this.submit();
+        }
       } else if (evt.key === "Escape" && this.noteSuggest.isOpen) {
         evt.stopPropagation();
         this.noteSuggest.hide();
