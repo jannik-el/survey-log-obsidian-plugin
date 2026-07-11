@@ -10,6 +10,8 @@ Press one hotkey, nudge the pre-filled timestamp with arrow keys if needed, pick
 - 14:31Z #Pier4
 ```
 
+![The entry modal: time pre-filled, location autocomplete open over a survey note](images/modal.png)
+
 Locations are inserted as normal Obsidian tags (default), so every entry for a location is findable through the tag pane, search, or Dataview — or as wikilinks (`[[Outer Breakwater]]`) if you prefer each location to be a note with a backlinks list of all its entries.
 
 Locations you type that aren't in your list yet are appended to the locations file automatically (toggleable).
