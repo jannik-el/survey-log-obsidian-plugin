@@ -6,6 +6,9 @@
 [![Build](https://img.shields.io/github/actions/workflow/status/jannik-el/survey-log-obsidian-plugin/release.yml?style=flat-square&branch=main&label=build)](https://github.com/jannik-el/survey-log-obsidian-plugin/actions)
 [![License](https://img.shields.io/github/license/jannik-el/survey-log-obsidian-plugin?style=flat-square&color=0c7489)](LICENSE)
 
+
+![Demo: hotkey opens the entry modal, time nudging, location and note autocomplete, tag search payoff](https://raw.githubusercontent.com/jannik-el/survey-log-obsidian-plugin/brag/brag-output/brag.gif)
+
 An [Obsidian](https://obsidian.md) plugin for fast, keyboard-only creation of timestamped log entries while out on survey tasks.
 
 Press one hotkey, nudge the pre-filled timestamp with arrow keys if needed, pick a location from an autocompleting list, optionally add a note (with suggestions from your own past entries), press Enter — and a clean, tagged log line lands in your active note:
@@ -17,8 +20,6 @@ Press one hotkey, nudge the pre-filled timestamp with arrow keys if needed, pick
 ```
 
 **▶ 26-second demo** ([watch with sound](https://github.com/jannik-el/survey-log-obsidian-plugin/blob/brag/brag-output/brag.mp4)):
-
-![Demo: hotkey opens the entry modal, time nudging, location and note autocomplete, tag search payoff](https://raw.githubusercontent.com/jannik-el/survey-log-obsidian-plugin/brag/brag-output/brag.gif)
 
 ![The entry modal: time pre-filled, location autocomplete open over a survey note](images/modal.png)
 
