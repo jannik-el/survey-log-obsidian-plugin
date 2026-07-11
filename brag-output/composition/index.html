@@ -39,7 +39,7 @@
         overflow: hidden;
         background: #000;
       }
-      body { font-family: "Inter", system-ui, sans-serif; color: #dcddde; }
+      body { font-family: "Inter", system-ui, sans-serif; color: #d7d9ce; }
 
       #root {
         position: relative;
@@ -54,20 +54,20 @@
         position: absolute;
         inset: 0;
         background:
-          radial-gradient(1100px 700px at 50% 42%, rgba(168, 130, 255, 0.07), transparent 70%),
-          linear-gradient(180deg, #17171b 0%, #1e1e1e 55%, #17171b 100%);
+          radial-gradient(1100px 700px at 50% 42%, rgba(17, 157, 164, 0.07), transparent 70%),
+          linear-gradient(180deg, #040404 0%, #0a1214 55%, #040404 100%);
       }
 
       /* ---------- scene 1: the mess ---------- */
       .frag {
         position: absolute;
         padding: 22px 30px;
-        background: #232326;
-        border: 1px solid #38383d;
+        background: #0b1517;
+        border: 1px solid #17343a;
         border-radius: 10px;
         font-family: "JetBrains Mono", ui-monospace, monospace;
         font-size: 30px;
-        color: #8f8f96;
+        color: #7e938f;
         filter: blur(0.6px);
       }
       #mess-center {
@@ -83,13 +83,13 @@
       #mess-line1 {
         font-size: 92px;
         font-weight: 700;
-        color: #f0f0f2;
+        color: #e9ebe0;
         text-shadow: 0 4px 40px rgba(0, 0, 0, 0.8);
       }
       #mess-line2 {
         font-size: 60px;
         font-weight: 600;
-        color: #c9b2ff;
+        color: #8ed7db;
         text-shadow: 0 4px 40px rgba(0, 0, 0, 0.8);
       }
 
@@ -101,8 +101,8 @@
         right: 0;
         text-align: center;
       }
-      #demo-title .t1 { font-size: 64px; font-weight: 700; color: #f0f0f2; }
-      #demo-title .t2 { margin-top: 14px; font-size: 34px; font-weight: 400; color: #a0a0a8; }
+      #demo-title .t1 { font-size: 64px; font-weight: 700; color: #e9ebe0; }
+      #demo-title .t2 { margin-top: 14px; font-size: 34px; font-weight: 400; color: #99b0aa; }
 
       #modal-wrap {
         position: absolute;
@@ -115,7 +115,7 @@
         width: 900px;
         height: 640px;
         border-radius: 50%;
-        background: radial-gradient(closest-side, rgba(168, 130, 255, 0.16), transparent 72%);
+        background: radial-gradient(closest-side, rgba(17, 157, 164, 0.16), transparent 72%);
         opacity: 0.35;
         justify-self: center;
         align-self: center;
@@ -123,14 +123,15 @@
       #modal {
         position: relative;
         width: 720px;
-        background: #262626;
-        border: 1px solid #3f3f46;
+        background: #0e181a;
+        border: 1px solid #1d3d43;
         border-radius: 14px;
         padding: 40px 44px 36px;
         box-shadow: 0 30px 90px rgba(0, 0, 0, 0.55);
       }
-      #modal .m-title { font-size: 34px; font-weight: 600; color: #f0f0f2; margin-bottom: 30px; }
-      #modal .m-label { font-size: 21px; color: #9b9ba3; margin-bottom: 10px; }
+      #modal .m-title { font-size: 34px; font-weight: 600; color: #e9ebe0; margin-bottom: 30px; }
+      #modal .m-label { font-size: 21px; color: #8fa8a2; margin-bottom: 10px; }
+      #modal .m-hint { font-size: 18px; color: #7d9294; margin-top: 10px; opacity: 0; }
       #modal .m-row { margin-bottom: 26px; position: relative; }
       .time-controls { display: flex; align-items: center; gap: 14px; }
       .step-btn {
@@ -138,77 +139,77 @@
         height: 54px;
         display: grid;
         place-items: center;
-        background: #2e2e33;
-        border: 1px solid #46464d;
+        background: #10262a;
+        border: 1px solid #1f4249;
         border-radius: 9px;
         font-size: 30px;
-        color: #cfcfd4;
+        color: #c4c8bd;
       }
       .time-box {
         width: 170px;
         height: 54px;
         display: grid;
         place-items: center;
-        background: #1e1e1e;
-        border: 1px solid #46464d;
+        background: #071012;
+        border: 1px solid #1f4249;
         border-radius: 9px;
         font-family: "JetBrains Mono", ui-monospace, monospace;
         font-size: 30px;
-        color: #f0f0f2;
+        color: #e9ebe0;
       }
       .field {
         height: 54px;
         display: flex;
         align-items: center;
-        padding: 0 18px;
-        background: #1e1e1e;
-        border: 1px solid #46464d;
+        padding: 0 8px;
+        background: #071012;
+        border: 1px solid #1f4249;
         border-radius: 9px;
         font-size: 26px;
-        color: #f0f0f2;
+        color: #e9ebe0;
       }
       .field .focus-ring {
         position: absolute;
         inset: 0;
-        border: 1px solid #a882ff;
+        border: 1px solid #119da4;
         border-radius: 9px;
-        box-shadow: 0 0 0 2px rgba(168, 130, 255, 0.25);
+        box-shadow: 0 0 0 2px rgba(17, 157, 164, 0.25);
         opacity: 0;
         pointer-events: none;
       }
       .field { position: relative; }
-      .field .placeholder { color: #6d6d75; }
+      .field .placeholder { color: #5d7573; position: absolute; left: 8px; }
       .caret {
         display: inline-block;
         width: 3px;
         height: 32px;
         margin-left: 3px;
-        background: #a882ff;
+        background: #119da4;
         vertical-align: middle;
       }
       .ch { opacity: 0; }
       .fill-text { opacity: 0; }
-      #loc-fill, #note-fill { position: absolute; left: 18px; }
+      #loc-fill, #note-fill { position: absolute; left: 8px; }
       .dropdown {
         position: absolute;
         left: 0;
         right: 0;
         top: 100%;
         margin-top: 8px;
-        background: #262626;
-        border: 1px solid #46464d;
+        background: #0e181a;
+        border: 1px solid #1f4249;
         border-radius: 9px;
         overflow: hidden;
         box-shadow: 0 18px 50px rgba(0, 0, 0, 0.5);
         opacity: 0;
         z-index: 5;
       }
-      .dd-item { padding: 14px 18px; font-size: 25px; color: #dcddde; }
-      .dd-item.sel { background: rgba(168, 130, 255, 0.16); color: #f0f0f2; }
+      .dd-item { padding: 14px 18px; font-size: 25px; color: #d7d9ce; }
+      .dd-item.sel { background: rgba(17, 157, 164, 0.16); color: #e9ebe0; }
       .cta { margin-top: 6px; display: flex; justify-content: flex-end; }
       .cta .btn {
-        background: #a882ff;
-        color: #17171b;
+        background: #119da4;
+        color: #040404;
         font-size: 25px;
         font-weight: 600;
         padding: 14px 28px;
@@ -225,40 +226,40 @@
       }
       #notecard {
         width: 1150px;
-        background: #202024;
-        border: 1px solid #3f3f46;
+        background: #0c1517;
+        border: 1px solid #1d3d43;
         border-radius: 14px;
         padding: 40px 52px 48px;
         box-shadow: 0 30px 90px rgba(0, 0, 0, 0.55);
       }
       #notecard .n-head {
         font-size: 27px;
-        color: #9b9ba3;
+        color: #8fa8a2;
         padding-bottom: 20px;
-        border-bottom: 1px solid #35353a;
+        border-bottom: 1px solid #16333a;
         margin-bottom: 26px;
       }
       .logline {
         font-family: "JetBrains Mono", ui-monospace, monospace;
         font-size: 33px;
-        color: #dcddde;
+        color: #d7d9ce;
         line-height: 1.9;
         white-space: nowrap;
       }
-      .logline.dim { color: #77777e; font-size: 29px; }
+      .logline.dim { color: #6d827f; font-size: 29px; }
       .pill {
         position: relative;
         display: inline-block;
         padding: 2px 16px;
         border-radius: 999px;
-        background: rgba(168, 130, 255, 0.16);
-        color: #c9b2ff;
+        background: rgba(17, 157, 164, 0.16);
+        color: #8ed7db;
       }
       .pill-glow {
         position: absolute;
         inset: -10px;
         border-radius: 999px;
-        background: radial-gradient(closest-side, rgba(168, 130, 255, 0.5), transparent 75%);
+        background: radial-gradient(closest-side, rgba(17, 157, 164, 0.5), transparent 75%);
         opacity: 0;
       }
 
@@ -274,8 +275,8 @@
       }
       #searchcard {
         width: 1150px;
-        background: #202024;
-        border: 1px solid #3f3f46;
+        background: #0c1517;
+        border: 1px solid #1d3d43;
         border-radius: 14px;
         padding: 36px 52px 40px;
         box-shadow: 0 30px 90px rgba(0, 0, 0, 0.55);
@@ -286,34 +287,34 @@
         gap: 16px;
         height: 62px;
         padding: 0 20px;
-        background: #1e1e1e;
-        border: 1px solid #a882ff;
-        box-shadow: 0 0 0 2px rgba(168, 130, 255, 0.22);
+        background: #071012;
+        border: 1px solid #119da4;
+        box-shadow: 0 0 0 2px rgba(17, 157, 164, 0.22);
         border-radius: 9px;
         font-family: "JetBrains Mono", ui-monospace, monospace;
         font-size: 30px;
-        color: #f0f0f2;
+        color: #e9ebe0;
         margin-bottom: 30px;
       }
       #searchbox .glass { font-size: 28px; color: #7d7d85; font-family: "Inter", sans-serif; }
       .result {
         padding: 18px 6px;
-        border-bottom: 1px solid #2e2e33;
+        border-bottom: 1px solid #12282d;
         opacity: 0;
       }
       .result:last-of-type { border-bottom: none; }
-      .result .src { font-size: 23px; color: #9b9ba3; margin-bottom: 8px; }
+      .result .src { font-size: 23px; color: #8fa8a2; margin-bottom: 8px; }
       .result .line {
         font-family: "JetBrains Mono", ui-monospace, monospace;
         font-size: 28px;
-        color: #dcddde;
+        color: #d7d9ce;
         white-space: nowrap;
       }
-      .hl { color: #c9b2ff; font-weight: 600; }
+      .hl { color: #8ed7db; font-weight: 600; }
       #search-caption {
         font-size: 40px;
         font-weight: 600;
-        color: #f0f0f2;
+        color: #e9ebe0;
         opacity: 0;
       }
 
@@ -333,19 +334,19 @@
         width: 1100px;
         height: 700px;
         border-radius: 50%;
-        background: radial-gradient(closest-side, rgba(168, 130, 255, 0.13), transparent 72%);
+        background: radial-gradient(closest-side, rgba(17, 157, 164, 0.13), transparent 72%);
         opacity: 0.3;
       }
-      #thesis { font-size: 78px; font-weight: 700; color: #f0f0f2; }
-      #thesis .accent { color: #c9b2ff; }
+      #thesis { font-size: 78px; font-weight: 700; color: #e9ebe0; }
+      #thesis .accent { color: #8ed7db; }
       #lockup { opacity: 0; }
-      #lockup .name { font-size: 100px; font-weight: 700; color: #f0f0f2; letter-spacing: -1px; }
-      #lockup .sub { margin-top: 16px; font-size: 36px; color: #a0a0a8; }
+      #lockup .name { font-size: 100px; font-weight: 700; color: #e9ebe0; letter-spacing: -1px; }
+      #lockup .sub { margin-top: 16px; font-size: 36px; color: #99b0aa; }
       #lockup .url {
         margin-top: 30px;
         font-family: "JetBrains Mono", ui-monospace, monospace;
         font-size: 26px;
-        color: #8f8f96;
+        color: #7e938f;
       }
     </style>
   </head>
@@ -397,6 +398,7 @@
                 <div class="time-box">11:52</div>
                 <div class="step-btn">+</div>
               </div>
+              <div class="m-hint" id="time-hint">&uarr;/&darr; &plusmn;1 min &middot; Shift+&uarr;/&darr; &plusmn;10 min &middot; Tab next field</div>
             </div>
 
             <div class="m-row">
@@ -417,7 +419,7 @@
               <div class="m-label">Note</div>
               <div class="field" id="note-field">
                 <span class="focus-ring" id="note-ring"></span>
-                <span class="placeholder" id="note-ph">Optional note&hellip;</span>
+                <span class="placeholder" id="note-ph" data-layout-allow-overlap>Optional note&hellip;</span>
                 <span id="note-typed"><span class="ch">w</span><span class="ch">a</span><span class="ch">t</span></span>
                 <span id="note-fill" class="fill-text">Water sample taken</span>
                 <span class="caret" id="note-caret" style="opacity: 0"></span>
@@ -480,36 +482,36 @@
       </div>
 
       <!-- ============ audio ============ -->
-      <audio id="bgm" src="assets/music/happy-beats-business-moves-vol-1-by-ende-dot-app.mp3" data-start="0" data-duration="21" data-track-index="10" data-volume="0.5"></audio>
+      <audio id="bgm" src="assets/music/so-low-so-cool-by-rockot.mp3" data-media-start="30" data-start="0" data-duration="21" data-track-index="10" data-volume="0.35"></audio>
 
-      <audio id="sfx-frag1" src="assets/sfx/impactSoft_medium_000.ogg" data-start="0.3" data-duration="0.6" data-track-index="11" data-volume="0.22"></audio>
-      <audio id="sfx-frag2" src="assets/sfx/impactSoft_medium_000.ogg" data-start="0.75" data-duration="0.6" data-track-index="12" data-volume="0.18"></audio>
-      <audio id="sfx-line1" src="assets/sfx/impactSoft_medium_001.ogg" data-start="0.8" data-duration="0.6" data-track-index="13" data-volume="0.4"></audio>
-      <audio id="sfx-line2" src="assets/sfx/impactSoft_medium_004.ogg" data-start="2.4" data-duration="0.6" data-track-index="14" data-volume="0.5"></audio>
-      <audio id="sfx-modal" src="assets/sfx/impactSoft_medium_003.ogg" data-start="4.6" data-duration="0.6" data-track-index="15" data-volume="0.45"></audio>
+      <audio id="sfx-frag1" src="assets/sfx/impactSoft_medium_000.ogg" data-start="0.3" data-duration="0.6" data-track-index="11" data-volume="0.3"></audio>
+      <audio id="sfx-frag2" src="assets/sfx/impactSoft_medium_000.ogg" data-start="0.75" data-duration="0.6" data-track-index="12" data-volume="0.25"></audio>
+      <audio id="sfx-line1" src="assets/sfx/impactSoft_medium_001.ogg" data-start="0.8" data-duration="0.6" data-track-index="13" data-volume="0.6"></audio>
+      <audio id="sfx-line2" src="assets/sfx/impactSoft_medium_004.ogg" data-start="2.2" data-duration="0.6" data-track-index="14" data-volume="0.7"></audio>
+      <audio id="sfx-modal" src="assets/sfx/impactSoft_medium_003.ogg" data-start="4.81" data-duration="0.6" data-track-index="15" data-volume="0.65"></audio>
 
-      <audio id="sfx-k1" src="assets/sfx/keypress-001.wav" data-start="7.2" data-duration="0.6" data-track-index="16" data-volume="0.3"></audio>
-      <audio id="sfx-k2" src="assets/sfx/keypress-002.wav" data-start="7.4" data-duration="0.6" data-track-index="17" data-volume="0.3"></audio>
-      <audio id="sfx-k3" src="assets/sfx/keypress-003.wav" data-start="7.6" data-duration="0.6" data-track-index="18" data-volume="0.3"></audio>
-      <audio id="sfx-acc1" src="assets/sfx/click_003.ogg" data-start="8.6" data-duration="0.6" data-track-index="19" data-volume="0.55"></audio>
+      <audio id="sfx-k1" src="assets/sfx/keypress-001.wav" data-start="7.2" data-duration="0.6" data-track-index="16" data-volume="0.55"></audio>
+      <audio id="sfx-k2" src="assets/sfx/keypress-002.wav" data-start="7.3" data-duration="0.6" data-track-index="17" data-volume="0.55"></audio>
+      <audio id="sfx-k3" src="assets/sfx/keypress-003.wav" data-start="7.4" data-duration="0.6" data-track-index="18" data-volume="0.55"></audio>
+      <audio id="sfx-acc1" src="assets/sfx/click_003.ogg" data-start="8.25" data-duration="0.6" data-track-index="19" data-volume="0.85"></audio>
 
-      <audio id="sfx-k4" src="assets/sfx/keypress-004.wav" data-start="9.5" data-duration="0.6" data-track-index="20" data-volume="0.3"></audio>
-      <audio id="sfx-k5" src="assets/sfx/keypress-002.wav" data-start="9.7" data-duration="0.6" data-track-index="21" data-volume="0.3"></audio>
-      <audio id="sfx-k6" src="assets/sfx/keypress-001.wav" data-start="9.9" data-duration="0.6" data-track-index="22" data-volume="0.3"></audio>
-      <audio id="sfx-acc2" src="assets/sfx/click_003.ogg" data-start="10.9" data-duration="0.6" data-track-index="23" data-volume="0.55"></audio>
+      <audio id="sfx-k4" src="assets/sfx/keypress-004.wav" data-start="9.5" data-duration="0.6" data-track-index="20" data-volume="0.55"></audio>
+      <audio id="sfx-k5" src="assets/sfx/keypress-002.wav" data-start="9.7" data-duration="0.6" data-track-index="21" data-volume="0.55"></audio>
+      <audio id="sfx-k6" src="assets/sfx/keypress-001.wav" data-start="9.9" data-duration="0.6" data-track-index="22" data-volume="0.55"></audio>
+      <audio id="sfx-acc2" src="assets/sfx/click_003.ogg" data-start="10.9" data-duration="0.6" data-track-index="23" data-volume="0.85"></audio>
 
-      <audio id="sfx-land" src="assets/sfx/impactBell_heavy_000.ogg" data-start="13.4" data-duration="1.2" data-track-index="24" data-volume="0.38"></audio>
+      <audio id="sfx-land" src="assets/sfx/impactBell_heavy_000.ogg" data-start="13.4" data-duration="1.2" data-track-index="24" data-volume="0.6"></audio>
 
-      <audio id="sfx-q1" src="assets/sfx/keypress-003.wav" data-start="14.9" data-duration="0.6" data-track-index="25" data-volume="0.28"></audio>
-      <audio id="sfx-q2" src="assets/sfx/keypress-001.wav" data-start="15.15" data-duration="0.6" data-track-index="26" data-volume="0.28"></audio>
-      <audio id="sfx-q3" src="assets/sfx/keypress-004.wav" data-start="15.4" data-duration="0.6" data-track-index="27" data-volume="0.28"></audio>
+      <audio id="sfx-q1" src="assets/sfx/keypress-003.wav" data-start="14.9" data-duration="0.6" data-track-index="25" data-volume="0.5"></audio>
+      <audio id="sfx-q2" src="assets/sfx/keypress-001.wav" data-start="15.15" data-duration="0.6" data-track-index="26" data-volume="0.5"></audio>
+      <audio id="sfx-q3" src="assets/sfx/keypress-004.wav" data-start="15.4" data-duration="0.6" data-track-index="27" data-volume="0.5"></audio>
 
-      <audio id="sfx-row1" src="assets/sfx/impactSoft_medium_002.ogg" data-start="16.02" data-duration="0.6" data-track-index="28" data-volume="0.35"></audio>
-      <audio id="sfx-row2" src="assets/sfx/impactSoft_medium_002.ogg" data-start="17.02" data-duration="0.6" data-track-index="29" data-volume="0.35"></audio>
-      <audio id="sfx-row3" src="assets/sfx/impactSoft_medium_002.ogg" data-start="18.02" data-duration="0.6" data-track-index="30" data-volume="0.35"></audio>
+      <audio id="sfx-row1" src="assets/sfx/impactSoft_medium_002.ogg" data-start="15.88" data-duration="0.6" data-track-index="28" data-volume="0.6"></audio>
+      <audio id="sfx-row2" src="assets/sfx/impactSoft_medium_002.ogg" data-start="16.95" data-duration="0.6" data-track-index="29" data-volume="0.6"></audio>
+      <audio id="sfx-row3" src="assets/sfx/impactSoft_medium_002.ogg" data-start="18.02" data-duration="0.6" data-track-index="30" data-volume="0.6"></audio>
 
-      <audio id="sfx-thesis" src="assets/sfx/impactSoft_medium_001.ogg" data-start="18.6" data-duration="0.6" data-track-index="31" data-volume="0.45"></audio>
-      <audio id="sfx-lockup" src="assets/sfx/impactBell_heavy_003.ogg" data-start="20.02" data-duration="1.2" data-track-index="32" data-volume="0.42"></audio>
+      <audio id="sfx-thesis" src="assets/sfx/impactSoft_medium_001.ogg" data-start="18.6" data-duration="0.6" data-track-index="31" data-volume="0.65"></audio>
+      <audio id="sfx-lockup" src="assets/sfx/impactBell_heavy_003.ogg" data-start="20.52" data-duration="1.2" data-track-index="32" data-volume="0.65"></audio>
     </div>
 
     <script>
@@ -526,48 +528,49 @@
       }, 0.15);
       tl.from("#mess-line1", { opacity: 0, y: 44, duration: 0.45, ease: "power3.out" }, 0.8);
       // dim the mess, land the second line harder
-      tl.to(["#frag1", "#frag2", "#frag3", "#frag4", "#frag5"], { opacity: 0.16, duration: 0.4 }, 2.2);
-      tl.from("#mess-line2", { opacity: 0, scale: 1.18, duration: 0.35, ease: "power3.out" }, 2.4);
+      tl.to(["#frag1", "#frag2", "#frag3", "#frag4", "#frag5"], { opacity: 0.16, duration: 0.4 }, 2.0);
+      tl.from("#mess-line2", { opacity: 0, scale: 1.18, duration: 0.35, ease: "power3.out" }, 2.2);
       tl.to("#mess-inner", { opacity: 0, y: -30, duration: 0.35, ease: "power2.in" }, 3.62);
       tl.set("#mess-inner", { opacity: 0 }, 4.0);
 
       /* ============ scene 2: the answer (4-7) ============ */
       tl.from("#demo-title", { opacity: 0, y: -28, duration: 0.5, ease: "power3.out" }, 4.3);
-      tl.from("#modal", { opacity: 0, y: 84, duration: 0.55, ease: "power3.out" }, 4.6);
+      tl.from("#modal", { opacity: 0, y: 84, duration: 0.55, ease: "power3.out" }, 4.81); // beat-locked: 4.81s
       // glow breathes (finite): 6 cycles x 1.2s = 7.2s (4.6 -> 11.8)
-      tl.to("#modal-glow", { opacity: 0.55, scale: 1.05, duration: 1.2, yoyo: true, repeat: 5, ease: "sine.inOut" }, 4.6);
-      // location field gains focus
+      tl.to("#modal-glow", { opacity: 0.55, scale: 1.05, duration: 1.2, yoyo: true, repeat: 5, ease: "sine.inOut" }, 4.81);
+      // keyboard hint fades in, location field gains focus
+      tl.to("#time-hint", { opacity: 1, duration: 0.35 }, 5.3);
       tl.set("#loc-ring", { opacity: 1 }, 5.1);
       // caret blinks in location field until accept (finite steps)
-      tl.to("#loc-caret", { opacity: 0, duration: 0.42, yoyo: true, repeat: 7, ease: "steps(1)" }, 5.2);
+      tl.to("#loc-caret", { opacity: 0, duration: 0.42, yoyo: true, repeat: 5, ease: "steps(1)" }, 5.2);
 
       /* ============ scene 3: the flow (7-14.5) ============ */
       // type "jet"
-      tl.set("#loc-typed .ch", { opacity: 1, stagger: 0.2 }, 7.2);
+      tl.set("#loc-typed .ch", { opacity: 1, stagger: 0.09 }, 7.2);
       // dropdown appears
-      tl.to("#loc-dd", { opacity: 1, duration: 0.22, ease: "power2.out" }, 7.85);
-      tl.from("#loc-dd", { y: 10, duration: 0.22, ease: "power2.out" }, 7.85);
+      tl.to("#loc-dd", { opacity: 1, duration: 0.22, ease: "power2.out" }, 7.55);
+      tl.from("#loc-dd", { y: 10, duration: 0.22, ease: "power2.out" }, 7.55);
       // Enter: accept JettyNorth
-      tl.set("#loc-typed", { opacity: 0 }, 8.6);
-      tl.set("#loc-fill", { opacity: 1 }, 8.6);
-      tl.to("#loc-dd", { opacity: 0, y: -6, duration: 0.22, ease: "power2.in" }, 8.62);
-      tl.set("#loc-caret", { opacity: 0 }, 8.6);
+      tl.set("#loc-typed", { opacity: 0 }, 8.25);
+      tl.set("#loc-fill", { opacity: 1 }, 8.25);
+      tl.to("#loc-dd", { opacity: 0, y: -6, duration: 0.22, ease: "power2.in" }, 8.27);
+      tl.set("#loc-caret", { opacity: 0 }, 8.25);
       // focus moves to note field
-      tl.set("#loc-ring", { opacity: 0 }, 8.75);
-      tl.set("#note-ring", { opacity: 1 }, 8.75);
-      tl.set("#note-ph", { opacity: 0 }, 8.75);
-      tl.set("#note-caret", { opacity: 1 }, 8.75);
-      tl.to("#note-caret", { opacity: 0, duration: 0.42, yoyo: true, repeat: 3, ease: "steps(1)" }, 8.85);
+      tl.set("#loc-ring", { opacity: 0 }, 8.4);
+      tl.set("#note-ring", { opacity: 1 }, 8.4);
+      tl.set("#note-ph", { opacity: 0 }, 8.4);
+      tl.set("#note-caret", { opacity: 1 }, 8.4);
+      tl.to("#note-caret", { opacity: 0, duration: 0.42, yoyo: true, repeat: 3, ease: "steps(1)" }, 8.5);
       // type "wat"
-      tl.set("#note-typed .ch", { opacity: 1, stagger: 0.2 }, 9.5);
+      tl.set("#note-typed .ch", { opacity: 1, stagger: 0.09 }, 9.0);
       // suggestion appears
-      tl.to("#note-dd", { opacity: 1, duration: 0.22, ease: "power2.out" }, 10.15);
-      tl.from("#note-dd", { y: 10, duration: 0.22, ease: "power2.out" }, 10.15);
+      tl.to("#note-dd", { opacity: 1, duration: 0.22, ease: "power2.out" }, 9.55);
+      tl.from("#note-dd", { y: 10, duration: 0.22, ease: "power2.out" }, 9.55);
       // Enter: accept the suggestion
-      tl.set("#note-typed", { opacity: 0 }, 10.9);
-      tl.set("#note-fill", { opacity: 1 }, 10.9);
-      tl.to("#note-dd", { opacity: 0, y: -6, duration: 0.22, ease: "power2.in" }, 10.92);
-      tl.set("#note-caret", { opacity: 0 }, 10.9);
+      tl.set("#note-typed", { opacity: 0 }, 10.35);
+      tl.set("#note-fill", { opacity: 1 }, 10.35);
+      tl.to("#note-dd", { opacity: 0, y: -6, duration: 0.22, ease: "power2.in" }, 10.37);
+      tl.set("#note-caret", { opacity: 0 }, 10.35);
       // modal dips away, note panel takes over
       tl.to("#modal-wrap", { opacity: 0, y: 44, duration: 0.4, ease: "power2.in" }, 11.9);
       tl.to("#demo-title", { opacity: 0, duration: 0.3 }, 11.9);
@@ -584,31 +587,32 @@
       // query types: 11 chars, 0.06s apart (14.9 -> 15.56)
       tl.set("#q-typed .ch", { opacity: 1, stagger: 0.06 }, 14.9);
       tl.to("#q-caret", { opacity: 0, duration: 0.42, yoyo: true, repeat: 3, ease: "steps(1)" }, 15.6);
-      // beat-locked result rows // beat-locked: 16.02s, 17.02s, 18.02s
-      tl.to("#row1", { opacity: 1, duration: 0.3, ease: "power2.out" }, 16.02);
-      tl.from("#row1", { y: 14, duration: 0.3, ease: "power2.out" }, 16.02);
-      tl.to("#row2", { opacity: 1, duration: 0.3, ease: "power2.out" }, 17.02);
-      tl.from("#row2", { y: 14, duration: 0.3, ease: "power2.out" }, 17.02);
+      // beat-locked result rows // beat-locked: 15.88s, 16.95s, 18.02s (168bpm grid)
+      tl.to("#row1", { opacity: 1, duration: 0.3, ease: "power2.out" }, 15.88);
+      tl.from("#row1", { y: 14, duration: 0.3, ease: "power2.out" }, 15.88);
+      tl.to("#row2", { opacity: 1, duration: 0.3, ease: "power2.out" }, 16.95);
+      tl.from("#row2", { y: 14, duration: 0.3, ease: "power2.out" }, 16.95);
       tl.to("#row3", { opacity: 1, duration: 0.3, ease: "power2.out" }, 18.02);
       tl.from("#row3", { y: 14, duration: 0.3, ease: "power2.out" }, 18.02);
-      tl.to("#search-caption", { opacity: 1, duration: 0.35, ease: "power2.out" }, 16.9);
-      tl.from("#search-caption", { y: 18, duration: 0.35, ease: "power2.out" }, 16.9);
+      tl.to("#search-caption", { opacity: 1, duration: 0.35, ease: "power2.out" }, 17.35);
+      tl.from("#search-caption", { y: 18, duration: 0.35, ease: "power2.out" }, 17.35);
 
       /* ============ scene 5: lockup (18.5-21) ============ */
-      tl.from("#thesis", { opacity: 0, y: 34, duration: 0.4, ease: "power3.out" }, 18.6);
-      // beat-locked: 20.02s — lockup rises, thesis settles upward
-      tl.to("#thesis", { y: -30, scale: 0.82, duration: 0.5, ease: "power2.inOut" }, 19.85);
-      tl.to("#lockup", { opacity: 1, duration: 0.45, ease: "power3.out" }, 20.02);
-      tl.from("#lockup", { y: 30, duration: 0.45, ease: "power3.out" }, 20.02);
+      tl.from("#thesis", { opacity: 0, y: 34, duration: 0.4, ease: "power3.out" }, 18.74); // beat-locked: 18.74s
+      // beat-locked: 20.52s — lockup rises, thesis settles upward
+      tl.to("#thesis", { y: -30, scale: 0.82, duration: 0.5, ease: "power2.inOut" }, 20.15);
+      tl.to("#lockup", { opacity: 1, duration: 0.45, ease: "power3.out" }, 20.52);
+      tl.from("#lockup", { y: 30, duration: 0.45, ease: "power3.out" }, 20.52);
       tl.to("#lockup-glow", { opacity: 0.6, scale: 1.06, duration: 1.1, yoyo: true, repeat: 1, ease: "sine.inOut" }, 18.7);
 
       /* ============ music arc ============ */
       // restrained under the mess, opens with the modal, ducks under typing, fades under the logo
-      tl.set("#bgm", { volume: 0.38 }, 0);
-      tl.to("#bgm", { volume: 0.6, duration: 0.6, ease: "power1.inOut" }, 4.5);
-      tl.to("#bgm", { volume: 0.45, duration: 0.4, ease: "power1.inOut" }, 7.1);
-      tl.to("#bgm", { volume: 0.6, duration: 0.5, ease: "power1.inOut" }, 11.2);
-      tl.to("#bgm", { volume: 0, duration: 1.4, ease: "power1.in" }, 19.6);
+      tl.set("#bgm", { volume: 0.22 }, 0);
+      tl.to("#bgm", { volume: 0.35, duration: 0.6, ease: "power1.inOut" }, 4.5);
+      tl.to("#bgm", { volume: 0.26, duration: 0.4, ease: "power1.inOut" }, 7.1);
+      tl.to("#bgm", { volume: 0.35, duration: 0.5, ease: "power1.inOut" }, 11.2);
+      tl.to("#bgm", { volume: 0.12, duration: 0.3, ease: "power1.in" }, 20.45);
+      tl.to("#bgm", { volume: 0, duration: 0.25, ease: "power1.in" }, 20.75);
 
       window.__timelines["main"] = tl;
     </script>

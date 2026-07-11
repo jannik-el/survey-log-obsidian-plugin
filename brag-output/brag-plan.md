@@ -33,10 +33,11 @@ Entry → key action → result → **retrieval**:
 ## Format: landscape — 1920x1080
 ## Duration: ~21 seconds
 
-## Visual identity (from the project)
-- Background: #1e1e1e (Obsidian dark), panels #262626, borders #3f3f46
-- Accent: #a882ff (Obsidian purple — tag pills, CTA button, glow)
-- Text: #dcddde primary, #999 muted
+## Visual identity (user palette, 2026-07-11)
+- Palette: #119da4 / #0c7489 / #13505b / #040404 / #d7d9ce (teal/petrol on near-black)
+- Background: #040404 with petrol gradient; panels #0e181a / #0c1517; borders from #13505b
+- Accent: #119da4 (tag pills, CTA button, glow, focus rings); light accent text #8ed7db
+- Text: #d7d9ce primary (bone), muted greens derived
 - Display font: Inter (600/700)
 - Body font: Inter; timestamps and log lines in JetBrains Mono
 - Strongest visual elements: the New log entry modal (time stepper, suggestion dropdown), the tagged entry line, and a tag-search results panel
@@ -45,8 +46,8 @@ Entry → key action → result → **retrieval**:
 Survey notes get messy — and if logging is slow, you just don't log. Survey Log for Obsidian: one hotkey, three keystrokes, and every entry is UTC-stamped and location-tagged so you can pull up every survey at that location months later.
 
 ## Audio direction
-- Role: warm confident bed under a precise UI demo
-- Music: happy-beats-business-moves-vol-1 (120 BPM bundled track)
+- Role: low bed under crisp foreground UI cues (user: "I want to hear the crisp clicks")
+- Music: "So Low So Cool" by Rockot (Pixabay, no attribution required), 168 BPM, played from 0:30 (instrumental section — vocal chops live at the track start)
 - Music treatment: start at 0 low; hold back during the messy hook, open up when the modal appears; duck slightly under typing; fade out over the last 1.5s under the logo
 - Music cue guidance: preset cues read (120.19 BPM). Strong cues at 16.02s / 17.02s / 18.02s / 18.52s / 20.02s / 21.01s — target the search-result arrivals and the final lockup near these. Beat grid (~0.5s spacing) may drive non-text accents only; search-result rows are readable text → every other beat at most.
 - Audio-reactive treatment: subtle; music RMS may breathe the purple glow behind modal/logo. No waveforms, no pulsing text.
