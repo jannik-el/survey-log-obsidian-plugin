@@ -1,5 +1,11 @@
 # Survey Log
 
+[![Version](https://img.shields.io/github/manifest-json/v/jannik-el/survey-log-obsidian-plugin?style=flat-square&label=version&color=0c7489)](https://github.com/jannik-el/survey-log-obsidian-plugin/releases)
+[![Obsidian downloads](https://img.shields.io/badge/dynamic/json?style=flat-square&color=0c7489&label=downloads&query=%24%5B%22survey-log%22%5D.downloads&url=https%3A%2F%2Fraw.githubusercontent.com%2Fobsidianmd%2Fobsidian-releases%2Fmaster%2Fcommunity-plugin-stats.json)](https://obsidian.md/plugins?id=survey-log)
+[![Obsidian](https://img.shields.io/badge/dynamic/json?style=flat-square&color=7c3aed&label=obsidian&query=%24.minAppVersion&url=https%3A%2F%2Fraw.githubusercontent.com%2Fjannik-el%2Fsurvey-log-obsidian-plugin%2Fmain%2Fmanifest.json&suffix=%2B)](https://obsidian.md)
+[![Build](https://img.shields.io/github/actions/workflow/status/jannik-el/survey-log-obsidian-plugin/release.yml?style=flat-square&branch=main&label=build)](https://github.com/jannik-el/survey-log-obsidian-plugin/actions)
+[![License](https://img.shields.io/github/license/jannik-el/survey-log-obsidian-plugin?style=flat-square&color=0c7489)](LICENSE)
+
 An [Obsidian](https://obsidian.md) plugin for fast, keyboard-only creation of timestamped log entries while out on survey tasks.
 
 Press one hotkey, nudge the pre-filled timestamp with arrow keys if needed, pick a location from an autocompleting list, optionally add a note (with suggestions from your own past entries), press Enter — and a clean, tagged log line lands in your active note:

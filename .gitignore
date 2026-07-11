@@ -12,3 +12,6 @@ node_modules/
 
 # obsidian dev vault (if placed inside repo)
 test-vault/
+
+# brag-output
+brag-output/
