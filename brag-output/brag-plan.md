@@ -31,7 +31,7 @@ Entry → key action → result → **retrieval**:
 - Interpretation: the hook is allowed one beat of visual chaos; everything after is restrained, longer holds, soft transitions; the typing demo and the filling search list carry the energy
 
 ## Format: landscape — 1920x1080
-## Duration: ~21 seconds
+## Duration: ~31 seconds
 
 ## Visual identity (user palette, 2026-07-11)
 - Palette: #119da4 / #0c7489 / #13505b / #040404 / #d7d9ce (teal/petrol on near-black)
