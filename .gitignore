@@ -1,0 +1,14 @@
+# build output
+main.js
+*.js.map
+
+# dependencies
+node_modules/
+
+# editors / OS
+.vscode/
+.idea/
+.DS_Store
+
+# obsidian dev vault (if placed inside repo)
+test-vault/
