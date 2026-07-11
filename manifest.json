@@ -1,9 +1,9 @@
 {
-  "id": "survey-log",
-  "name": "Survey Log",
-  "version": "0.1.0",
-  "minAppVersion": "1.5.0",
-  "description": "Create timestamped survey log entries with location tags via a fast, keyboard-only modal with autocomplete.",
-  "author": "Jannik",
-  "isDesktopOnly": false
+	"id": "survey-log",
+	"name": "Survey Log",
+	"version": "0.1.1",
+	"minAppVersion": "1.5.0",
+	"description": "Create timestamped survey log entries with location tags via a fast, keyboard-only modal with autocomplete.",
+	"author": "Jannik",
+	"isDesktopOnly": false
 }
