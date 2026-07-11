@@ -1,0 +1,1 @@
+Survey notes get messy — and if logging is slow, you just don't log. So I built Survey Log for Obsidian: one hotkey, three keystrokes, and every entry lands UTC-stamped and location-tagged. Months later, one search pulls up every survey at that location.
