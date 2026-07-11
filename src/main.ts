@@ -34,7 +34,8 @@ export default class SurveyLogPlugin extends Plugin {
   }
 
   async loadSettings(): Promise<void> {
-    this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
+    const data = (await this.loadData()) as Partial<SurveyLogSettings> | null;
+    this.settings = { ...DEFAULT_SETTINGS, ...(data ?? {}) };
   }
 
   async saveSettings(): Promise<void> {
@@ -107,6 +108,10 @@ export default class SurveyLogPlugin extends Plugin {
   }
 
   private async buildVaultNoteTextCache(): Promise<string[]> {
+    // Vault enumeration is required for vault-wide note-text autocomplete:
+    // suggestions are harvested from past log entries across all notes. Only
+    // reached when "Note suggestions from" is set to "Whole vault" (the scan
+    // is skipped entirely in "Current note only" mode); results are cached.
     const texts: string[] = [];
     for (const file of this.app.vault.getMarkdownFiles()) {
       try {
