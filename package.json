@@ -1,6 +1,6 @@
 {
   "name": "survey-log",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Fast, keyboard-only timestamped survey log entries with location tags and autocomplete",
   "main": "main.js",
   "scripts": {
