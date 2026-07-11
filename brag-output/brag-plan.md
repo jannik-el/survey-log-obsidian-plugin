@@ -16,7 +16,7 @@ Dark screen. Scattered, half-readable note fragments drift at angles ("12:40?? j
 - **The structure payoff:** a search for `#JettyNorth` fills with entries from *different* survey notes (2026-06-30, 2026-07-11, 2026-07-12) — months of work at one location, one query.
 
 ## Outro / punchline
-**Fast to write. Structured to find.** Then the lockup: **Survey Log** — *field logging for Obsidian* — `github.com/jannik-el/survey-log-obsidian-plugin`.
+**Fast to write. Structured to find.** Then the lockup: **Survey Log** — *event logging for Obsidian* — `github.com/jannik-el/survey-log-obsidian-plugin`.
 
 ## User flow worth showing
 Entry → key action → result → **retrieval**:
@@ -96,8 +96,8 @@ Audio-coupled idea: search typing ticks; row arrivals near strong cues (16.02 / 
 Music: full presence
 Transition mood: soft → Scene 5
 
-### Scene 5 — Lockup — 3s
-Thesis line lands: "Fast to write. Structured to find." (hold ≥1.5s). Then the lockup rises: **Survey Log**, subline "field logging for Obsidian", URL small beneath; purple glow breathes as music fades out.
+### Scene 5 — Lockup — 4s (held ending)
+Thesis line lands: "Fast to write. Structured to find." (hold ≥1.5s). Then the lockup rises: **Survey Log**, subline "event logging for Obsidian", URL small beneath; purple glow breathes as music fades out.
 Sequential/interaction: thesis line, then lockup (lockup near strong cue ~20.02s)
 Audio intent: one soft impact for the thesis; music fades under logo
 Audio-coupled idea: beat-locked lockup; final fade
