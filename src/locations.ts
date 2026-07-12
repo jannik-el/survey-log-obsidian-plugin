@@ -58,6 +58,17 @@ export function isValidLocation(name: string, style: LocationStyle): boolean {
 }
 
 /**
+ * Build the initial contents of a freshly created locations file from
+ * user-entered lines: a heading (so the note reads well in Obsidian),
+ * then each non-blank line, trimmed. Blank lines are dropped. Names are
+ * written verbatim — parseLocationsFile sanitizes them on read.
+ */
+export function buildLocationsFileContent(rawLines: string[]): string {
+  const names = rawLines.map((line) => line.trim()).filter((line) => line !== "");
+  return names.length > 0 ? `# Locations\n\n${names.join("\n")}\n` : "# Locations\n";
+}
+
+/**
  * Parse the contents of the locations note into a list of location
  * names sanitized for the given style. One location per line; blank
  * lines and lines starting with "#" (comments/headings) are ignored;

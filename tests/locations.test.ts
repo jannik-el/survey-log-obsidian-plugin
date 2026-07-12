@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  buildLocationsFileContent,
   isValidTagName,
   parseLocationsFile,
   sanitizeLinkName,
@@ -119,5 +120,29 @@ describe("parseLocationsFile", () => {
   it("unwraps [[...]] lines in both styles", () => {
     expect(parseLocationsFile("[[Outer Breakwater]]", "link")).toEqual(["Outer Breakwater"]);
     expect(parseLocationsFile("[[Outer Breakwater]]", "tag")).toEqual(["Outer-Breakwater"]);
+  });
+});
+
+describe("buildLocationsFileContent", () => {
+  it("writes a heading followed by trimmed non-blank lines", () => {
+    expect(buildLocationsFileContent(["Jetty North", "Pier 4"])).toBe(
+      "# Locations\n\nJetty North\nPier 4\n"
+    );
+  });
+
+  it("drops blank and whitespace-only lines", () => {
+    expect(buildLocationsFileContent(["  Jetty North  ", "", "   ", "Pier 4"])).toBe(
+      "# Locations\n\nJetty North\nPier 4\n"
+    );
+  });
+
+  it("returns just the heading when there are no locations", () => {
+    expect(buildLocationsFileContent([])).toBe("# Locations\n");
+    expect(buildLocationsFileContent(["", "   "])).toBe("# Locations\n");
+  });
+
+  it("round-trips through parseLocationsFile", () => {
+    const content = buildLocationsFileContent(["Jetty North", "Pier 4"]);
+    expect(parseLocationsFile(content)).toEqual(["Jetty-North", "Pier-4"]);
   });
 });

@@ -66,6 +66,31 @@
   color: var(--text-error);
 }
 
+.survey-log-modal .survey-log-setup-intro {
+  font-size: var(--font-ui-small);
+  color: var(--text-muted);
+  margin-bottom: var(--size-4-3);
+}
+
+.survey-log-modal .survey-log-setup-intro p {
+  margin: 0 0 var(--size-2-3);
+}
+
+.survey-log-modal .survey-log-setup-intro code {
+  font-size: var(--font-ui-smaller);
+}
+
+.survey-log-modal .survey-log-setup-textarea {
+  width: 100%;
+  resize: vertical;
+  font-family: var(--font-text);
+}
+
+.survey-log-modal .survey-log-setup-buttons {
+  display: flex;
+  gap: var(--size-2-3);
+}
+
 /* Larger touch targets on mobile */
 .is-mobile .survey-log-modal .survey-log-step-btn {
   min-width: var(--size-4-12);

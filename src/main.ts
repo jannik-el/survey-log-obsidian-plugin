@@ -2,6 +2,7 @@ import { MarkdownView, Plugin, TFile, normalizePath } from "obsidian";
 import { harvestNoteTexts } from "./entries";
 import { parseLocationsFile } from "./locations";
 import { SurveyLogModal } from "./modal";
+import { LocationsSetupModal } from "./setup";
 import { DEFAULT_SETTINGS, SurveyLogSettingTab } from "./settings";
 import type { SurveyLogSettings } from "./settings";
 
@@ -21,7 +22,7 @@ export default class SurveyLogPlugin extends Plugin {
       checkCallback: (checking) => {
         const view = this.app.workspace.getActiveViewOfType(MarkdownView);
         if (!view) return false;
-        if (!checking) new SurveyLogModal(this, view).open();
+        if (!checking) this.openLogEntry(view);
         return true;
       },
     });
@@ -43,6 +44,19 @@ export default class SurveyLogPlugin extends Plugin {
   }
 
   /**
+   * Open the log-entry modal. On first use — when the locations file
+   * doesn't exist yet — show the setup dialog first so the user can
+   * establish (and optionally seed) it before logging.
+   */
+  private openLogEntry(view: MarkdownView): void {
+    if (this.hasLocationsFile()) {
+      new SurveyLogModal(this, view).open();
+      return;
+    }
+    new LocationsSetupModal(this, () => new SurveyLogModal(this, view).open()).open();
+  }
+
+  /**
    * Locations from the configured locations file, sanitized.
    * Returns null when the file does not exist (so the modal can hint).
    * Re-read on every call — the file is small and must never be stale.
@@ -60,6 +74,30 @@ export default class SurveyLogPlugin extends Plugin {
   private locationsTFile(): TFile | null {
     const file = this.app.vault.getAbstractFileByPath(this.locationsPath());
     return file instanceof TFile ? file : null;
+  }
+
+  /** Whether the configured locations file currently exists in the vault. */
+  hasLocationsFile(): boolean {
+    return this.locationsTFile() !== null;
+  }
+
+  /** The configured locations-file path, normalized (for display in the setup dialog). */
+  get locationsFilePath(): string {
+    return this.locationsPath();
+  }
+
+  /**
+   * Create the locations file at the configured path with the given
+   * initial content. Returns true on success; false when the path is
+   * taken by a folder or its parent folder is missing.
+   */
+  async createLocationsFile(content: string): Promise<boolean> {
+    try {
+      await this.app.vault.create(this.locationsPath(), content);
+      return true;
+    } catch {
+      return false;
+    }
   }
 
   /**
