@@ -1,6 +1,6 @@
 {
   "name": "survey-log",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Fast event logging for surveys: timestamped, location-tagged entries via a keyboard-shortcut and mobile-friendly modal with autocomplete",
   "main": "main.js",
   "scripts": {

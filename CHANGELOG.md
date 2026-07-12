@@ -11,6 +11,8 @@ new version and becomes the GitHub release notes shown in Obsidian's update view
 
 ## [Unreleased]
 
+## [0.1.7] - 2026-07-12
+
 ### Added
 
 - **First-run setup dialog.** When you run **Create log entry** and no locations
@@ -79,7 +81,8 @@ new version and becomes the GitHub release notes shown in Obsidian's update view
   auto-add of new locations; and a settings tab for all of the above.
 - Auto-release CI: version bump and GitHub release on each push to `main`.
 
-[Unreleased]: https://github.com/jannik-el/survey-log-obsidian-plugin/compare/0.1.6...HEAD
+[Unreleased]: https://github.com/jannik-el/survey-log-obsidian-plugin/compare/0.1.7...HEAD
+[0.1.7]: https://github.com/jannik-el/survey-log-obsidian-plugin/compare/0.1.6...0.1.7
 [0.1.6]: https://github.com/jannik-el/survey-log-obsidian-plugin/compare/0.1.5...0.1.6
 [0.1.5]: https://github.com/jannik-el/survey-log-obsidian-plugin/compare/0.1.4...0.1.5
 [0.1.4]: https://github.com/jannik-el/survey-log-obsidian-plugin/compare/0.1.3...0.1.4

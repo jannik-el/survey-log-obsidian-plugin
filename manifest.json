@@ -1,7 +1,7 @@
 {
 	"id": "survey-log",
 	"name": "Survey Log",
-	"version": "0.1.6",
+	"version": "0.1.7",
 	"minAppVersion": "1.5.0",
 	"description": "Fast event logging for field surveys: timestamped, location-tagged entries via a keyboard-shortcut and mobile-friendly modal with autocomplete.",
 	"author": "Jannik",
