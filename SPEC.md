@@ -2,7 +2,7 @@
 
 ## Objective
 
-An Obsidian plugin for fast, keyboard-only creation of timestamped log entries while out on survey tasks.
+An Obsidian plugin for fast event logging while out on survey tasks — timestamped, location-tagged entries created in seconds via a keyboard shortcut on desktop or by tapping on mobile.
 
 **User story:** As a surveyor in the field, I press one hotkey, get a pre-filled timestamp I can nudge with arrow keys, pick a location from an autocompleting list, optionally type a note (with suggestions from my own past entries), press Enter — and a clean, tagged log line lands in my active note. Afterwards, I can find every entry for a location via Obsidian's normal tag search.
 

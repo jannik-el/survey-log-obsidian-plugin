@@ -3,7 +3,7 @@
 	"name": "Survey Log",
 	"version": "0.1.6",
 	"minAppVersion": "1.5.0",
-	"description": "Create timestamped survey log entries with location tags via a fast, keyboard-only modal with autocomplete.",
+	"description": "Fast event logging for field surveys: timestamped, location-tagged entries via a keyboard-shortcut and mobile-friendly modal with autocomplete.",
 	"author": "Jannik",
 	"isDesktopOnly": false
 }

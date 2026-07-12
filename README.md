@@ -9,9 +9,9 @@
 
 ![Demo: hotkey opens the entry modal, time nudging, location and note autocomplete, tag search payoff](https://raw.githubusercontent.com/jannik-el/survey-log-obsidian-plugin/brag/brag-output/brag.gif)
 
-An [Obsidian](https://obsidian.md) plugin for fast, keyboard-only creation of timestamped log entries while out on survey tasks.
+An [Obsidian](https://obsidian.md) plugin for fast **event logging** while out on survey tasks — timestamped, location-tagged entries you can capture in seconds, whether via a keyboard shortcut on desktop or by tapping on mobile.
 
-Press one hotkey, nudge the pre-filled timestamp with arrow keys if needed, pick a location from an autocompleting list, optionally add a note (with suggestions from your own past entries), press Enter — and a clean, tagged log line lands in your active note:
+Trigger the command (assign a hotkey, or tap it on mobile), nudge the pre-filled timestamp if needed, pick a location from an autocompleting list, optionally add a note (with suggestions from your own past entries) — and a clean, tagged log line lands in your active note:
 
 ```markdown
 - 13:47Z #JettyNorth Started transect
