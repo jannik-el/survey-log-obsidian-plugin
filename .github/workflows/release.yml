@@ -70,7 +70,17 @@ jobs:
         run: |
           version="$(node -p "require('./manifest.json').version")"
           git push origin main "refs/tags/$version"
-          gh release create "$version" \
-            --title "$version" \
-            --generate-notes \
-            main.js manifest.json styles.css
+          # Use the curated CHANGELOG section as release notes; fall back to
+          # auto-generated notes when this version has no changelog entry.
+          node changelog.mjs extract "$version" > release-notes.md
+          if [ -s release-notes.md ]; then
+            gh release create "$version" \
+              --title "$version" \
+              --notes-file release-notes.md \
+              main.js manifest.json styles.css
+          else
+            gh release create "$version" \
+              --title "$version" \
+              --generate-notes \
+              main.js manifest.json styles.css
+          fi
