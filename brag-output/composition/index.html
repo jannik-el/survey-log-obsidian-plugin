@@ -394,6 +394,173 @@
         opacity: 0;
       }
 
+      /* ---------- scene 3b: mobile ---------- */
+      #mob-left {
+        position: absolute;
+        left: 170px;
+        top: 340px;
+        width: 760px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+      .mob-line { font-size: 58px; font-weight: 700; color: #e9ebe0; opacity: 0; }
+      .mob-line .m-accent { color: #8ed7db; }
+      #mob-l3 { font-size: 28px; line-height: 1.5; color: #99b0aa; opacity: 0; max-width: 660px; }
+      #phone-wrap { position: absolute; left: 1160px; top: 120px; }
+      #phone {
+        position: relative;
+        width: 400px;
+        height: 840px;
+        background: #0a1315;
+        border: 2px solid #1d3d43;
+        border-radius: 52px;
+        padding: 22px 18px;
+        box-shadow: 0 34px 100px rgba(0, 0, 0, 0.6);
+      }
+      #ph-screen {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: #0c1517;
+        border-radius: 34px;
+        overflow: hidden;
+        padding: 70px 26px 26px;
+      }
+      #ph-notch {
+        position: absolute;
+        left: 50%;
+        top: 36px;
+        transform: translateX(-50%);
+        width: 120px;
+        height: 26px;
+        border-radius: 999px;
+        background: #040404;
+        z-index: 9;
+      }
+      .ph-head { font-size: 21px; color: #8fa8a2; padding-bottom: 14px; border-bottom: 1px solid #16333a; margin-bottom: 16px; }
+      .ph-line {
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 17px;
+        line-height: 2.1;
+        color: #6d827f;
+        white-space: nowrap;
+      }
+      #ph-entry { color: #d7d9ce; opacity: 0; }
+      #ph-entry .pill { font-size: 16px; padding: 1px 10px; }
+      #ph-palette {
+        position: absolute;
+        left: 14px;
+        right: 14px;
+        top: 64px;
+        background: #0e181a;
+        border: 1px solid #1f4249;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 16px 44px rgba(0, 0, 0, 0.55);
+        opacity: 0;
+        z-index: 6;
+      }
+      #ph-pal-input { padding: 14px 16px; border-bottom: 1px solid #16333a; font-size: 18px; color: #5d7573; }
+      .ph-pal-item { padding: 13px 16px; font-size: 18px; color: #d7d9ce; }
+      .ph-pal-item.sel { background: rgba(17, 157, 164, 0.16); color: #e9ebe0; }
+      #ph-modal {
+        position: absolute;
+        left: 14px;
+        right: 14px;
+        top: 190px;
+        background: #0e181a;
+        border: 1px solid #1f4249;
+        border-radius: 12px;
+        padding: 26px 24px 28px;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        z-index: 7;
+      }
+      #ph-modal .ph-m-title { font-size: 22px; font-weight: 600; color: #e9ebe0; margin-bottom: 18px; }
+      #ph-modal .ph-m-label { font-size: 15px; color: #8fa8a2; margin-bottom: 7px; }
+      .ph-time-row { display: flex; gap: 10px; margin-bottom: 16px; }
+      .ph-step {
+        width: 44px;
+        height: 44px;
+        display: grid;
+        place-items: center;
+        background: #10262a;
+        border: 1px solid #1f4249;
+        border-radius: 8px;
+        font-size: 22px;
+        color: #c4c8bd;
+      }
+      .ph-time {
+        flex: 1;
+        height: 44px;
+        display: grid;
+        place-items: center;
+        background: #071012;
+        border: 1px solid #1f4249;
+        border-radius: 8px;
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 22px;
+        color: #e9ebe0;
+      }
+      .ph-field {
+        position: relative;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+        background: #071012;
+        border: 1px solid #1f4249;
+        border-radius: 8px;
+        font-size: 19px;
+        color: #e9ebe0;
+        margin-bottom: 16px;
+      }
+      .ph-field .phf-ph { color: #5d7573; }
+      #ph-loc-fill { position: absolute; left: 12px; opacity: 0; }
+      #ph-dd,
+      #ph-ndd {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: calc(100% + 6px);
+        background: #0e181a;
+        border: 1px solid #1f4249;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 12px 34px rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        z-index: 8;
+      }
+      #ph-note-fill { position: absolute; left: 12px; opacity: 0; }
+      #ph-entry { white-space: normal; }
+      .ph-dd-item { padding: 12px 16px; font-size: 18px; color: #d7d9ce; }
+      .ph-dd-item.sel { background: rgba(17, 157, 164, 0.16); color: #e9ebe0; }
+      .ph-btn {
+        height: 52px;
+        display: grid;
+        place-items: center;
+        background: #119da4;
+        color: #040404;
+        font-size: 20px;
+        font-weight: 600;
+        border-radius: 10px;
+        margin-top: 4px;
+      }
+      #touch-dot {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: rgba(142, 215, 219, 0.32);
+        border: 2px solid rgba(142, 215, 219, 0.65);
+        opacity: 0;
+        z-index: 10;
+        pointer-events: none;
+      }
+
       /* ---------- scene 4: search ---------- */
       #search-center {
         position: absolute;
@@ -489,11 +656,33 @@
       #lockup .name { font-size: 100px; font-weight: 700; color: #e9ebe0; letter-spacing: -1px; }
       #lockup .sub { margin-top: 16px; font-size: 36px; color: #99b0aa; }
       #lockup .url {
-        margin-top: 30px;
+        margin-top: 32px;
         font-family: "JetBrains Mono", ui-monospace, monospace;
-        font-size: 26px;
+        font-size: 24px;
         color: #7e938f;
       }
+      #store-line {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 40px;
+        font-size: 31px;
+        font-weight: 600;
+        color: #8ed7db;
+        opacity: 0;
+      }
+      #store-line svg { width: 34px; height: 34px; fill: #8ed7db; }
+      #plat-icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 58px;
+        margin-top: 30px;
+      }
+      #plat-icons .pi { opacity: 0; display: block; }
+      #plat-icons svg { height: 42px; width: 42px; fill: #99b0aa; display: block; }
+      #pi-win svg { width: 37px; }
     </style>
   </head>
   <body>
@@ -501,17 +690,17 @@
       id="root"
       data-composition-id="main"
       data-start="0"
-      data-duration="47.5"
+      data-duration="55.1"
       data-width="1920"
       data-height="1080"
     >
       <!-- background, full length -->
-      <div id="bg" class="clip" data-start="0" data-duration="47.5" data-track-index="0">
+      <div id="bg" class="clip" data-start="0" data-duration="55.1" data-track-index="0">
         <div id="bg-fill"></div>
       </div>
 
-      <!-- scene 1: the mess (0-12.6s) -->
-      <div id="scene-mess" class="clip" data-start="0" data-duration="12.6" data-track-index="1">
+      <!-- scene 1: the mess (0-8s) -->
+      <div id="scene-mess" class="clip" data-start="0" data-duration="8" data-track-index="1">
         <div id="mess-inner" style="position: absolute; inset: 0">
           <div id="messnote">
             <div class="mn-title">Field log &mdash; Wed</div>
@@ -531,7 +720,7 @@
       </div>
 
       <!-- scene 2: any note + command palette -->
-      <div id="scene-palette" class="clip" data-start="12.6" data-duration="4.8" data-track-index="1">
+      <div id="scene-palette" class="clip" data-start="8" data-duration="4.8" data-track-index="1">
         <div id="pal-center">
           <div id="palwrap">
             <div id="palnote">
@@ -561,7 +750,7 @@
       </div>
 
       <!-- scene 3: the answer + the flow -->
-      <div id="scene-demo" class="clip" data-start="17.4" data-duration="17.6" data-track-index="1">
+      <div id="scene-demo" class="clip" data-start="12.8" data-duration="17.6" data-track-index="1">
         <div id="demo-title">
           <div class="t1">Survey Log</div>
           <div class="t2">an Obsidian plugin &mdash; structure handled, flexible enough to write anything</div>
@@ -645,8 +834,55 @@
         </div>
       </div>
 
+      <!-- scene 3b: on your phone -->
+      <div id="scene-mobile" class="clip" data-start="30.4" data-duration="9.8" data-track-index="1">
+        <div id="mob-left">
+          <div class="mob-line" id="mob-l1">Laptop open? <span class="m-accent">Log it in seconds.</span></div>
+          <div class="mob-line" id="mob-l2">On deck? <span class="m-accent">Use your phone.</span></div>
+          <div id="mob-l3">Swipe down for quick actions &mdash; a full entry in a couple of taps.</div>
+        </div>
+        <div id="phone-wrap">
+          <div id="phone">
+            <div id="ph-notch"></div>
+            <div id="ph-screen">
+              <div class="ph-head">Survey 2026-07-12</div>
+              <div class="ph-line">- 11:54Z #JettySouth Transect</div>
+              <div class="ph-line" id="ph-entry">- 11:52Z <span class="pill">#JettyNorth</span> Water sample taken</div>
+              <div id="ph-palette" data-layout-allow-overlap>
+                <div id="ph-pal-input">Select a command&hellip;</div>
+                <div class="ph-pal-item sel">Survey Log: Create log entry</div>
+                <div class="ph-pal-item">Add internal link</div>
+                <div class="ph-pal-item">Add tag</div>
+              </div>
+              <div id="ph-modal" data-layout-allow-overlap>
+                <div class="ph-m-title">New log entry</div>
+                <div class="ph-m-label">Time (UTC)</div>
+                <div class="ph-time-row"><div class="ph-step">&minus;</div><div class="ph-time">11:52</div><div class="ph-step">+</div></div>
+                <div class="ph-m-row" style="position: relative">
+                  <div class="ph-m-label">Location</div>
+                  <div class="ph-field"><span class="phf-ph" id="ph-loc-ph" data-layout-allow-overlap>Location&hellip;</span><span id="ph-loc-fill">JettyNorth</span></div>
+                  <div id="ph-dd" data-layout-allow-overflow>
+                    <div class="ph-dd-item sel">JettyNorth</div>
+                    <div class="ph-dd-item">JettySouth</div>
+                  </div>
+                </div>
+                <div class="ph-m-row" style="position: relative">
+                  <div class="ph-m-label">Note</div>
+                  <div class="ph-field"><span class="phf-ph" id="ph-note-ph" data-layout-allow-overlap>Optional note&hellip;</span><span id="ph-note-fill">Water sample taken</span></div>
+                  <div id="ph-ndd" data-layout-allow-overflow>
+                    <div class="ph-dd-item sel">Water sample taken</div>
+                  </div>
+                </div>
+                <div class="ph-btn" id="ph-btn">Insert entry</div>
+              </div>
+              <div id="touch-dot" data-layout-ignore></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- scene 4: find it later -->
-      <div id="scene-search" class="clip" data-start="35" data-duration="6" data-track-index="1">
+      <div id="scene-search" class="clip" data-start="40.2" data-duration="6" data-track-index="1">
         <div id="search-center">
           <div id="searchcard">
             <div id="searchbox">
@@ -673,7 +909,7 @@
       </div>
 
       <!-- scene 5: lockup -->
-      <div id="scene-lockup" class="clip" data-start="41" data-duration="6.5" data-track-index="1">
+      <div id="scene-lockup" class="clip" data-start="46.2" data-duration="8.9" data-track-index="1">
         <div id="hassle-center"><div id="hassle">Survey logs shouldn&rsquo;t be a hassle.</div></div>
         <div id="lockup-center">
           <div id="lockup-glow"></div>
@@ -681,215 +917,306 @@
           <div id="lockup">
             <div class="name">Survey Log</div>
             <div class="sub">event logging for Obsidian</div>
+            <div id="store-line"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.355 18.538a68.967 68.959 0 0 0 1.858-2.954.81.81 0 0 0-.062-.9c-.516-.685-1.504-2.075-2.042-3.362-.553-1.321-.636-3.375-.64-4.377a1.707 1.707 0 0 0-.358-1.05l-3.198-4.064a3.744 3.744 0 0 1-.076.543c-.106.503-.307 1.004-.536 1.5-.134.29-.29.6-.446.914l-.31.626c-.516 1.068-.997 2.227-1.132 3.59-.124 1.26.046 2.73.815 4.481.128.011.257.025.386.044a6.363 6.363 0 0 1 3.326 1.505c.916.79 1.744 1.922 2.415 3.5zM8.199 22.569c.073.012.146.02.22.02.78.024 2.095.092 3.16.29.87.16 2.593.64 4.01 1.055 1.083.316 2.198-.548 2.355-1.664.114-.814.33-1.735.725-2.58l-.01.005c-.67-1.87-1.522-3.078-2.416-3.849a5.295 5.295 0 0 0-2.778-1.257c-1.54-.216-2.952.19-3.84.45.532 2.218.368 4.829-1.425 7.531zM5.533 9.938c-.023.1-.056.197-.098.29L2.82 16.059a1.602 1.602 0 0 0 .313 1.772l4.116 4.24c2.103-3.101 1.796-6.02.836-8.3-.728-1.73-1.832-3.081-2.55-3.831zM9.32 14.01c.615-.183 1.606-.465 2.745-.534-.683-1.725-.848-3.233-.716-4.577.154-1.552.7-2.847 1.235-3.95.113-.235.223-.454.328-.664.149-.297.288-.577.419-.86.217-.47.379-.885.46-1.27.08-.38.08-.72-.014-1.043-.095-.325-.297-.675-.68-1.06a1.6 1.6 0 0 0-1.475.36l-4.95 4.452a1.602 1.602 0 0 0-.513.952l-.427 2.83c.672.59 2.328 2.316 3.335 4.711.09.21.175.43.253.653z"/></svg><span>Install now &mdash; Obsidian community plugins</span></div>
+            <div id="plat-icons">
+              <span class="pi" id="pi-win"><svg viewBox="0 0 448 512" aria-hidden="true"><path d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg></span>
+              <span class="pi" id="pi-linux"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489a.424.424 0 00-.11.135c-.26.268-.45.6-.663.839-.199.199-.485.267-.797.4-.313.136-.658.269-.864.68-.09.189-.136.394-.132.602 0 .199.027.4.055.536.058.399.116.728.04.97-.249.68-.28 1.145-.106 1.484.174.334.535.47.94.601.81.2 1.91.135 2.774.6.926.466 1.866.67 2.616.47.526-.116.97-.464 1.208-.946.587-.003 1.23-.269 2.26-.334.699-.058 1.574.267 2.577.2.025.134.063.198.114.333l.003.003c.391.778 1.113 1.132 1.884 1.071.771-.06 1.592-.536 2.257-1.306.631-.765 1.683-1.084 2.378-1.503.348-.199.629-.469.649-.853.023-.4-.2-.811-.714-1.376v-.097l-.003-.003c-.17-.2-.25-.535-.338-.926-.085-.401-.182-.786-.492-1.046h-.003c-.059-.054-.123-.067-.188-.135a.357.357 0 00-.19-.064c.431-1.278.264-2.55-.173-3.694-.533-1.41-1.465-2.638-2.175-3.483-.796-1.005-1.576-1.957-1.56-3.368.026-2.152.236-6.133-3.544-6.139zm.529 3.405h.013c.213 0 .396.062.584.198.19.135.33.332.438.533.105.259.158.459.166.724 0-.02.006-.04.006-.06v.105a.086.086 0 01-.004-.021l-.004-.024a1.807 1.807 0 01-.15.706.953.953 0 01-.213.335.71.71 0 00-.088-.042c-.104-.045-.198-.064-.284-.133a1.312 1.312 0 00-.22-.066c.05-.06.146-.133.183-.198.053-.128.082-.264.088-.402v-.02a1.21 1.21 0 00-.061-.4c-.045-.134-.101-.2-.183-.333-.084-.066-.167-.132-.267-.132h-.016c-.093 0-.176.03-.262.132a.8.8 0 00-.205.334 1.18 1.18 0 00-.09.4v.019c.002.089.008.179.02.267-.193-.067-.438-.135-.607-.202a1.635 1.635 0 01-.018-.2v-.02a1.772 1.772 0 01.15-.768c.082-.22.232-.406.43-.533a.985.985 0 01.594-.2zm-2.962.059h.036c.142 0 .27.048.399.135.146.129.264.288.344.465.09.199.14.4.153.667v.004c.007.134.006.2-.002.266v.08c-.03.007-.056.018-.083.024-.152.055-.274.135-.393.2.012-.09.013-.18.003-.267v-.015c-.012-.133-.04-.2-.082-.333a.613.613 0 00-.166-.267.248.248 0 00-.183-.064h-.021c-.071.006-.13.04-.186.132a.552.552 0 00-.12.27.944.944 0 00-.023.33v.015c.012.135.037.2.08.334.046.134.098.2.166.268.01.009.02.018.034.024-.07.057-.117.07-.176.136a.304.304 0 01-.131.068 2.62 2.62 0 01-.275-.402 1.772 1.772 0 01-.155-.667 1.759 1.759 0 01.08-.668 1.43 1.43 0 01.283-.535c.128-.133.26-.2.418-.2zm1.37 1.706c.332 0 .733.065 1.216.399.293.2.523.269 1.052.468h.003c.255.136.405.266.478.399v-.131a.571.571 0 01.016.47c-.123.31-.516.643-1.063.842v.002c-.268.135-.501.333-.775.465-.276.135-.588.292-1.012.267a1.139 1.139 0 01-.448-.067 3.566 3.566 0 01-.322-.198c-.195-.135-.363-.332-.612-.465v-.005h-.005c-.4-.246-.616-.512-.686-.71-.07-.268-.005-.47.193-.6.224-.135.38-.271.483-.336.104-.074.143-.102.176-.131h.002v-.003c.169-.202.436-.47.839-.601.139-.036.294-.065.466-.065zm2.8 2.142c.358 1.417 1.196 3.475 1.735 4.473.286.534.855 1.659 1.102 3.024.156-.005.33.018.513.064.646-1.671-.546-3.467-1.089-3.966-.22-.2-.232-.335-.123-.335.59.534 1.365 1.572 1.646 2.757.13.535.16 1.104.021 1.67.067.028.135.06.205.067 1.032.534 1.413.938 1.23 1.537v-.043c-.06-.003-.12 0-.18 0h-.016c.151-.467-.182-.825-1.065-1.224-.915-.4-1.646-.336-1.77.465-.008.043-.013.066-.018.135-.068.023-.139.053-.209.064-.43.268-.662.669-.793 1.187-.13.533-.17 1.156-.205 1.869v.003c-.02.334-.17.838-.319 1.35-1.5 1.072-3.58 1.538-5.348.334a2.645 2.645 0 00-.402-.533 1.45 1.45 0 00-.275-.333c.182 0 .338-.03.465-.067a.615.615 0 00.314-.334c.108-.267 0-.697-.345-1.163-.345-.467-.931-.995-1.788-1.521-.63-.4-.986-.87-1.15-1.396-.165-.534-.143-1.085-.015-1.645.245-1.07.873-2.11 1.274-2.763.107-.065.037.135-.408.974-.396.751-1.14 2.497-.122 3.854a8.123 8.123 0 01.647-2.876c.564-1.278 1.743-3.504 1.836-5.268.048.036.217.135.289.202.218.133.38.333.59.465.21.201.477.335.876.335.039.003.075.006.11.006.412 0 .73-.134.997-.268.29-.134.52-.334.74-.4h.005c.467-.135.835-.402 1.044-.7zm2.185 8.958c.037.6.343 1.245.882 1.377.588.134 1.434-.333 1.791-.765l.211-.01c.315-.007.577.01.847.268l.003.003c.208.199.305.53.391.876.085.4.154.78.409 1.066.486.527.645.906.636 1.14l.003-.007v.018l-.003-.012c-.015.262-.185.396-.498.595-.63.401-1.746.712-2.457 1.57-.618.737-1.37 1.14-2.036 1.191-.664.053-1.237-.2-1.574-.898l-.005-.003c-.21-.4-.12-1.025.056-1.69.176-.668.428-1.344.463-1.897.037-.714.076-1.335.195-1.814.12-.465.308-.797.641-.984l.045-.022zm-10.814.049h.01c.053 0 .105.005.157.014.376.055.706.333 1.023.752l.91 1.664.003.003c.243.533.754 1.064 1.189 1.637.434.598.77 1.131.729 1.57v.006c-.057.744-.48 1.148-1.125 1.294-.645.135-1.52.002-2.395-.464-.968-.536-2.118-.469-2.857-.602-.369-.066-.61-.2-.723-.4-.11-.2-.113-.602.123-1.23v-.004l.002-.003c.117-.334.03-.752-.027-1.118-.055-.401-.083-.71.043-.94.16-.334.396-.4.69-.533.294-.135.64-.202.915-.47h.002v-.002c.256-.268.445-.601.668-.838.19-.201.38-.336.663-.336zm7.159-9.074c-.435.201-.945.535-1.488.535-.542 0-.97-.267-1.28-.466-.154-.134-.28-.268-.373-.335-.164-.134-.144-.333-.074-.333.109.016.129.134.199.2.096.066.215.2.36.333.292.2.68.467 1.167.467.485 0 1.053-.267 1.398-.466.195-.135.445-.334.648-.467.156-.136.149-.267.279-.267.128.016.034.134-.147.332a8.097 8.097 0 01-.69.468zm-1.082-1.583V5.64c-.006-.02.013-.042.029-.05.074-.043.18-.027.26.004.063 0 .16.067.15.135-.006.049-.085.066-.135.066-.055 0-.092-.043-.141-.068-.052-.018-.146-.008-.163-.065zm-.551 0c-.02.058-.113.049-.166.066-.047.025-.086.068-.14.068-.05 0-.13-.02-.136-.068-.01-.066.088-.133.15-.133.08-.031.184-.047.259-.005.019.009.036.03.03.05v.02h.003z"/></svg></span>
+              <span class="pi" id="pi-apple"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg></span>
+              <span class="pi" id="pi-android"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.4395 5.5586c-.675 1.1664-1.352 2.3318-2.0274 3.498-.0366-.0155-.0742-.0286-.1113-.043-1.8249-.6957-3.484-.8-4.42-.787-1.8551.0185-3.3544.4643-4.2597.8203-.084-.1494-1.7526-3.021-2.0215-3.4864a1.1451 1.1451 0 0 0-.1406-.1914c-.3312-.364-.9054-.4859-1.379-.203-.475.282-.7136.9361-.3886 1.5019 1.9466 3.3696-.0966-.2158 1.9473 3.3593.0172.031-.4946.2642-1.3926 1.0177C2.8987 12.176.452 14.772 0 18.9902h24c-.119-1.1108-.3686-2.099-.7461-3.0683-.7438-1.9118-1.8435-3.2928-2.7402-4.1836a12.1048 12.1048 0 0 0-2.1309-1.6875c.6594-1.122 1.312-2.2559 1.9649-3.3848.2077-.3615.1886-.7956-.0079-1.1191a1.1001 1.1001 0 0 0-.8515-.5332c-.5225-.0536-.9392.3128-1.0488.5449zm-.0391 8.461c.3944.5926.324 1.3306-.1563 1.6503-.4799.3197-1.188.0985-1.582-.4941-.3944-.5927-.324-1.3307.1563-1.6504.4727-.315 1.1812-.1086 1.582.4941zM7.207 13.5273c.4803.3197.5506 1.0577.1563 1.6504-.394.5926-1.1038.8138-1.584.4941-.48-.3197-.5503-1.0577-.1563-1.6504.4008-.6021 1.1087-.8106 1.584-.4941z"/></svg></span>
+            </div>
             <div class="url">github.com/jannik-el/survey-log-obsidian-plugin</div>
           </div>
         </div>
       </div>
 
       <!-- ============ audio ============ -->
-      <audio id="bgm" src="assets/music/so-low-so-cool-from-30s-by-rockot.mp3" data-start="0" data-duration="47.5" data-track-index="10" data-volume="0.34"></audio>
+      <audio id="bgm" src="assets/music/so-low-so-cool-from-30s-ext-by-rockot.mp3" data-start="0" data-duration="55.1" data-track-index="10" data-volume="0.34"></audio>
 
       <!-- scene 1 -->
-      <audio id="sfx-m1" src="assets/sfx/keypress-001.wav" data-start="0.5" data-duration="0.5" data-track-index="11" data-volume="0.4"></audio>
-      <audio id="sfx-m2" src="assets/sfx/keypress-002.wav" data-start="0.85" data-duration="0.5" data-track-index="12" data-volume="0.4"></audio>
-      <audio id="sfx-m3" src="assets/sfx/keypress-003.wav" data-start="1.2" data-duration="0.5" data-track-index="13" data-volume="0.4"></audio>
-      <audio id="sfx-m4" src="assets/sfx/keypress-004.wav" data-start="1.6" data-duration="0.5" data-track-index="14" data-volume="0.4"></audio>
-      <audio id="sfx-m5" src="assets/sfx/keypress-002.wav" data-start="2.0" data-duration="0.5" data-track-index="15" data-volume="0.4"></audio>
-      <audio id="sfx-m6" src="assets/sfx/keypress-001.wav" data-start="2.4" data-duration="0.5" data-track-index="16" data-volume="0.4"></audio>
-      <audio id="sfx-m7" src="assets/sfx/keypress-003.wav" data-start="2.85" data-duration="0.5" data-track-index="17" data-volume="0.4"></audio>
-      <audio id="sfx-mline1" src="assets/sfx/impactSoft_medium_001.ogg" data-start="4.4" data-duration="0.6" data-track-index="18" data-volume="0.5"></audio>
-      <audio id="sfx-mline2" src="assets/sfx/impactSoft_medium_004.ogg" data-start="6.6" data-duration="0.6" data-track-index="19" data-volume="0.55"></audio>
+      <audio id="sfx-m1" src="assets/sfx/keypress-001.wav" data-start="0.35" data-duration="0.5" data-track-index="11" data-volume="0.4"></audio>
+      <audio id="sfx-m2" src="assets/sfx/keypress-002.wav" data-start="0.6" data-duration="0.5" data-track-index="12" data-volume="0.4"></audio>
+      <audio id="sfx-m3" src="assets/sfx/keypress-003.wav" data-start="0.85" data-duration="0.5" data-track-index="13" data-volume="0.4"></audio>
+      <audio id="sfx-m4" src="assets/sfx/keypress-004.wav" data-start="1.1" data-duration="0.5" data-track-index="14" data-volume="0.4"></audio>
+      <audio id="sfx-m5" src="assets/sfx/keypress-002.wav" data-start="1.35" data-duration="0.5" data-track-index="15" data-volume="0.4"></audio>
+      <audio id="sfx-m6" src="assets/sfx/keypress-001.wav" data-start="1.6" data-duration="0.5" data-track-index="16" data-volume="0.4"></audio>
+      <audio id="sfx-m7" src="assets/sfx/keypress-003.wav" data-start="1.85" data-duration="0.5" data-track-index="17" data-volume="0.4"></audio>
+      <audio id="sfx-mline1" src="assets/sfx/impactSoft_medium_001.ogg" data-start="2.4" data-duration="0.6" data-track-index="18" data-volume="0.5"></audio>
+      <audio id="sfx-mline2" src="assets/sfx/impactSoft_medium_004.ogg" data-start="4.3" data-duration="0.6" data-track-index="19" data-volume="0.55"></audio>
 
       <!-- scene 2 -->
-      <audio id="sfx-ctrlp" src="assets/sfx/keypress-002.wav" data-start="13.6" data-duration="0.5" data-track-index="20" data-volume="0.55"></audio>
-      <audio id="sfx-palpop" src="assets/sfx/impactSoft_medium_000.ogg" data-start="13.95" data-duration="0.6" data-track-index="21" data-volume="0.4"></audio>
-      <audio id="sfx-pk1" src="assets/sfx/keypress-001.wav" data-start="14.45" data-duration="0.5" data-track-index="22" data-volume="0.5"></audio>
-      <audio id="sfx-pk2" src="assets/sfx/keypress-003.wav" data-start="14.57" data-duration="0.5" data-track-index="23" data-volume="0.5"></audio>
-      <audio id="sfx-pk3" src="assets/sfx/keypress-004.wav" data-start="14.69" data-duration="0.5" data-track-index="24" data-volume="0.5"></audio>
-      <audio id="sfx-enter" src="assets/sfx/click_003.ogg" data-start="16.0" data-duration="0.5" data-track-index="25" data-volume="0.85"></audio>
+      <audio id="sfx-ctrlp" src="assets/sfx/keypress-002.wav" data-start="9.0" data-duration="0.5" data-track-index="20" data-volume="0.55"></audio>
+      <audio id="sfx-palpop" src="assets/sfx/impactSoft_medium_000.ogg" data-start="9.35" data-duration="0.6" data-track-index="21" data-volume="0.4"></audio>
+      <audio id="sfx-pk1" src="assets/sfx/keypress-001.wav" data-start="9.85" data-duration="0.5" data-track-index="22" data-volume="0.5"></audio>
+      <audio id="sfx-pk2" src="assets/sfx/keypress-003.wav" data-start="9.97" data-duration="0.5" data-track-index="23" data-volume="0.5"></audio>
+      <audio id="sfx-pk3" src="assets/sfx/keypress-004.wav" data-start="10.09" data-duration="0.5" data-track-index="24" data-volume="0.5"></audio>
+      <audio id="sfx-enter" src="assets/sfx/click_003.ogg" data-start="11.4" data-duration="0.5" data-track-index="25" data-volume="0.85"></audio>
 
       <!-- scene 3 -->
-      <audio id="sfx-modal" src="assets/sfx/impactSoft_medium_003.ogg" data-start="18.0" data-duration="0.6" data-track-index="26" data-volume="0.65"></audio>
-      <audio id="sfx-t1" src="assets/sfx/keypress-002.wav" data-start="19.2" data-duration="0.5" data-track-index="27" data-volume="0.55"></audio>
-      <audio id="sfx-t2" src="assets/sfx/keypress-003.wav" data-start="19.8" data-duration="0.5" data-track-index="28" data-volume="0.55"></audio>
-      <audio id="sfx-t3" src="assets/sfx/keypress-001.wav" data-start="20.4" data-duration="0.5" data-track-index="29" data-volume="0.6"></audio>
-      <audio id="sfx-t4" src="assets/sfx/keypress-004.wav" data-start="21.1" data-duration="0.5" data-track-index="30" data-volume="0.6"></audio>
-      <audio id="sfx-t5" src="assets/sfx/keypress-002.wav" data-start="21.8" data-duration="0.5" data-track-index="31" data-volume="0.55"></audio>
-      <audio id="sfx-t6" src="assets/sfx/keypress-003.wav" data-start="22.4" data-duration="0.5" data-track-index="32" data-volume="0.55"></audio>
-      <audio id="sfx-tab" src="assets/sfx/keypress-001.wav" data-start="22.95" data-duration="0.5" data-track-index="33" data-volume="0.5"></audio>
-      <audio id="sfx-k1" src="assets/sfx/keypress-001.wav" data-start="23.5" data-duration="0.5" data-track-index="34" data-volume="0.55"></audio>
-      <audio id="sfx-k2" src="assets/sfx/keypress-002.wav" data-start="23.62" data-duration="0.5" data-track-index="35" data-volume="0.55"></audio>
-      <audio id="sfx-k3" src="assets/sfx/keypress-003.wav" data-start="23.74" data-duration="0.5" data-track-index="36" data-volume="0.55"></audio>
-      <audio id="sfx-sn1" src="assets/sfx/impactSoft_medium_000.ogg" data-start="24.5" data-duration="0.6" data-track-index="37" data-volume="0.3"></audio>
-      <audio id="sfx-acc1" src="assets/sfx/click_003.ogg" data-start="25.4" data-duration="0.5" data-track-index="38" data-volume="0.85"></audio>
-      <audio id="sfx-k4" src="assets/sfx/keypress-004.wav" data-start="26.3" data-duration="0.5" data-track-index="39" data-volume="0.55"></audio>
-      <audio id="sfx-k5" src="assets/sfx/keypress-002.wav" data-start="26.42" data-duration="0.5" data-track-index="40" data-volume="0.55"></audio>
-      <audio id="sfx-k6" src="assets/sfx/keypress-001.wav" data-start="26.54" data-duration="0.5" data-track-index="41" data-volume="0.55"></audio>
-      <audio id="sfx-sn2" src="assets/sfx/impactSoft_medium_000.ogg" data-start="27.3" data-duration="0.6" data-track-index="42" data-volume="0.3"></audio>
-      <audio id="sfx-acc2" src="assets/sfx/click_003.ogg" data-start="28.1" data-duration="0.5" data-track-index="43" data-volume="0.85"></audio>
-      <audio id="sfx-cap" src="assets/sfx/impactSoft_medium_002.ogg" data-start="28.4" data-duration="0.6" data-track-index="44" data-volume="0.4"></audio>
-      <audio id="sfx-land" src="assets/sfx/impactBell_heavy_000.ogg" data-start="32.9" data-duration="1.2" data-track-index="45" data-volume="0.6"></audio>
+      <audio id="sfx-modal" src="assets/sfx/impactSoft_medium_003.ogg" data-start="13.4" data-duration="0.6" data-track-index="26" data-volume="0.65"></audio>
+      <audio id="sfx-t1" src="assets/sfx/keypress-002.wav" data-start="14.6" data-duration="0.5" data-track-index="27" data-volume="0.55"></audio>
+      <audio id="sfx-t2" src="assets/sfx/keypress-003.wav" data-start="15.2" data-duration="0.5" data-track-index="28" data-volume="0.55"></audio>
+      <audio id="sfx-t3" src="assets/sfx/keypress-001.wav" data-start="15.8" data-duration="0.5" data-track-index="29" data-volume="0.6"></audio>
+      <audio id="sfx-t4" src="assets/sfx/keypress-004.wav" data-start="16.5" data-duration="0.5" data-track-index="30" data-volume="0.6"></audio>
+      <audio id="sfx-t5" src="assets/sfx/keypress-002.wav" data-start="17.2" data-duration="0.5" data-track-index="31" data-volume="0.55"></audio>
+      <audio id="sfx-t6" src="assets/sfx/keypress-003.wav" data-start="17.8" data-duration="0.5" data-track-index="32" data-volume="0.55"></audio>
+      <audio id="sfx-tab" src="assets/sfx/keypress-001.wav" data-start="18.35" data-duration="0.5" data-track-index="33" data-volume="0.5"></audio>
+      <audio id="sfx-k1" src="assets/sfx/keypress-001.wav" data-start="18.9" data-duration="0.5" data-track-index="34" data-volume="0.55"></audio>
+      <audio id="sfx-k2" src="assets/sfx/keypress-002.wav" data-start="19.02" data-duration="0.5" data-track-index="35" data-volume="0.55"></audio>
+      <audio id="sfx-k3" src="assets/sfx/keypress-003.wav" data-start="19.14" data-duration="0.5" data-track-index="36" data-volume="0.55"></audio>
+      <audio id="sfx-sn1" src="assets/sfx/impactSoft_medium_000.ogg" data-start="19.9" data-duration="0.6" data-track-index="37" data-volume="0.3"></audio>
+      <audio id="sfx-acc1" src="assets/sfx/click_003.ogg" data-start="20.8" data-duration="0.5" data-track-index="38" data-volume="0.85"></audio>
+      <audio id="sfx-k4" src="assets/sfx/keypress-004.wav" data-start="21.7" data-duration="0.5" data-track-index="39" data-volume="0.55"></audio>
+      <audio id="sfx-k5" src="assets/sfx/keypress-002.wav" data-start="21.82" data-duration="0.5" data-track-index="40" data-volume="0.55"></audio>
+      <audio id="sfx-k6" src="assets/sfx/keypress-001.wav" data-start="21.94" data-duration="0.5" data-track-index="41" data-volume="0.55"></audio>
+      <audio id="sfx-sn2" src="assets/sfx/impactSoft_medium_000.ogg" data-start="22.7" data-duration="0.6" data-track-index="42" data-volume="0.3"></audio>
+      <audio id="sfx-acc2" src="assets/sfx/click_003.ogg" data-start="23.5" data-duration="0.5" data-track-index="43" data-volume="0.85"></audio>
+      <audio id="sfx-cap" src="assets/sfx/impactSoft_medium_002.ogg" data-start="23.8" data-duration="0.6" data-track-index="44" data-volume="0.4"></audio>
+      <audio id="sfx-land" src="assets/sfx/impactBell_heavy_000.ogg" data-start="28.3" data-duration="1.2" data-track-index="45" data-volume="0.6"></audio>
+
+      <!-- scene 3b: mobile -->
+      <audio id="sfx-phone" src="assets/sfx/impactSoft_medium_003.ogg" data-start="30.55" data-duration="0.6" data-track-index="46" data-volume="0.5"></audio>
+      <audio id="sfx-mobl1" src="assets/sfx/impactSoft_medium_001.ogg" data-start="30.8" data-duration="0.6" data-track-index="47" data-volume="0.4"></audio>
+      <audio id="sfx-mobl2" src="assets/sfx/impactSoft_medium_004.ogg" data-start="31.5" data-duration="0.6" data-track-index="48" data-volume="0.4"></audio>
+      <audio id="sfx-phpal" src="assets/sfx/impactSoft_medium_000.ogg" data-start="32.45" data-duration="0.6" data-track-index="49" data-volume="0.4"></audio>
+      <audio id="sfx-tap1" src="assets/sfx/click_003.ogg" data-start="33.3" data-duration="0.5" data-track-index="50" data-volume="0.8"></audio>
+      <audio id="sfx-phmodal" src="assets/sfx/impactSoft_medium_003.ogg" data-start="33.95" data-duration="0.6" data-track-index="51" data-volume="0.5"></audio>
+      <audio id="sfx-tap2" src="assets/sfx/click_003.ogg" data-start="34.5" data-duration="0.5" data-track-index="52" data-volume="0.6"></audio>
+      <audio id="sfx-tap3" src="assets/sfx/click_003.ogg" data-start="35.3" data-duration="0.5" data-track-index="53" data-volume="0.8"></audio>
+      <audio id="sfx-tap4" src="assets/sfx/click_003.ogg" data-start="35.9" data-duration="0.5" data-track-index="54" data-volume="0.6"></audio>
+      <audio id="sfx-tap5" src="assets/sfx/click_003.ogg" data-start="36.7" data-duration="0.5" data-track-index="55" data-volume="0.8"></audio>
+      <audio id="sfx-tap6" src="assets/sfx/click_003.ogg" data-start="37.4" data-duration="0.5" data-track-index="56" data-volume="0.85"></audio>
+      <audio id="sfx-phland" src="assets/sfx/impactBell_heavy_000.ogg" data-start="38.0" data-duration="1.2" data-track-index="57" data-volume="0.45"></audio>
+      <audio id="sfx-mobl3" src="assets/sfx/impactSoft_medium_002.ogg" data-start="38.2" data-duration="0.6" data-track-index="58" data-volume="0.4"></audio>
 
       <!-- scene 4 -->
-      <audio id="sfx-q1" src="assets/sfx/keypress-003.wav" data-start="35.4" data-duration="0.5" data-track-index="46" data-volume="0.5"></audio>
-      <audio id="sfx-q2" src="assets/sfx/keypress-001.wav" data-start="35.55" data-duration="0.5" data-track-index="47" data-volume="0.5"></audio>
-      <audio id="sfx-q3" src="assets/sfx/keypress-004.wav" data-start="35.7" data-duration="0.5" data-track-index="48" data-volume="0.5"></audio>
-      <audio id="sfx-row1" src="assets/sfx/impactSoft_medium_002.ogg" data-start="36.6" data-duration="0.6" data-track-index="49" data-volume="0.6"></audio>
-      <audio id="sfx-row2" src="assets/sfx/impactSoft_medium_002.ogg" data-start="37.6" data-duration="0.6" data-track-index="50" data-volume="0.6"></audio>
-      <audio id="sfx-row3" src="assets/sfx/impactSoft_medium_002.ogg" data-start="38.6" data-duration="0.6" data-track-index="51" data-volume="0.6"></audio>
+      <audio id="sfx-q1" src="assets/sfx/keypress-003.wav" data-start="40.6" data-duration="0.5" data-track-index="59" data-volume="0.5"></audio>
+      <audio id="sfx-q2" src="assets/sfx/keypress-001.wav" data-start="40.75" data-duration="0.5" data-track-index="60" data-volume="0.5"></audio>
+      <audio id="sfx-q3" src="assets/sfx/keypress-004.wav" data-start="40.9" data-duration="0.5" data-track-index="61" data-volume="0.5"></audio>
+      <audio id="sfx-row1" src="assets/sfx/impactSoft_medium_002.ogg" data-start="41.8" data-duration="0.6" data-track-index="62" data-volume="0.6"></audio>
+      <audio id="sfx-row2" src="assets/sfx/impactSoft_medium_002.ogg" data-start="42.8" data-duration="0.6" data-track-index="63" data-volume="0.6"></audio>
+      <audio id="sfx-row3" src="assets/sfx/impactSoft_medium_002.ogg" data-start="43.8" data-duration="0.6" data-track-index="64" data-volume="0.6"></audio>
 
       <!-- scene 5 -->
-      <audio id="sfx-hassle" src="assets/sfx/impactSoft_medium_002.ogg" data-start="41.2" data-duration="0.6" data-track-index="52" data-volume="0.5"></audio>
-      <audio id="sfx-thesis" src="assets/sfx/impactSoft_medium_001.ogg" data-start="43.2" data-duration="0.6" data-track-index="53" data-volume="0.65"></audio>
-      <audio id="sfx-lockup" src="assets/sfx/impactBell_heavy_003.ogg" data-start="45.5" data-duration="1.2" data-track-index="54" data-volume="0.65"></audio>
+      <audio id="sfx-hassle" src="assets/sfx/impactSoft_medium_002.ogg" data-start="46.4" data-duration="0.6" data-track-index="65" data-volume="0.5"></audio>
+      <audio id="sfx-thesis" src="assets/sfx/impactSoft_medium_001.ogg" data-start="48.4" data-duration="0.6" data-track-index="66" data-volume="0.65"></audio>
+      <audio id="sfx-lockup" src="assets/sfx/impactBell_heavy_003.ogg" data-start="50.7" data-duration="1.2" data-track-index="67" data-volume="0.65"></audio>
+      <audio id="sfx-store" src="assets/sfx/impactSoft_medium_002.ogg" data-start="51.5" data-duration="0.6" data-track-index="68" data-volume="0.45"></audio>
+      <audio id="sfx-pi1" src="assets/sfx/click_003.ogg" data-start="51.95" data-duration="0.5" data-track-index="69" data-volume="0.35"></audio>
+      <audio id="sfx-pi2" src="assets/sfx/click_003.ogg" data-start="52.07" data-duration="0.5" data-track-index="70" data-volume="0.35"></audio>
+      <audio id="sfx-pi3" src="assets/sfx/click_003.ogg" data-start="52.19" data-duration="0.5" data-track-index="71" data-volume="0.35"></audio>
+      <audio id="sfx-pi4" src="assets/sfx/click_003.ogg" data-start="52.31" data-duration="0.5" data-track-index="72" data-volume="0.35"></audio>
     </div>
 
     <script>
       window.__timelines = window.__timelines || {};
       const tl = gsap.timeline({ paused: true });
 
-      /* ============ scene 1: the mess (0-12.6) — log stays, framing beneath ============ */
-      tl.from("#messnote", { opacity: 0, y: 26, duration: 0.4, ease: "power3.out" }, 0.1);
+      /* ============ scene 1: the mess (0-8.0) — snappy: fast jots, quick framing ============ */
+      tl.from("#messnote", { opacity: 0, y: 26, duration: 0.35, ease: "power3.out" }, 0.05);
       // bullets jotted in fast, one after another (the "written quickly" feel)
-      tl.to("#mn1", { opacity: 1, duration: 0.18 }, 0.5);
-      tl.to("#mn2", { opacity: 1, duration: 0.18 }, 0.85);
-      tl.to("#mn3", { opacity: 1, duration: 0.18 }, 1.2);
-      tl.to("#mn4", { opacity: 1, duration: 0.18 }, 1.6);
-      tl.to("#mn5", { opacity: 1, duration: 0.18 }, 2.0);
-      tl.to("#mn6", { opacity: 1, duration: 0.18 }, 2.4);
-      tl.to("#mn7", { opacity: 1, duration: 0.18 }, 2.85);
-      // log stays fully visible; framing lines land beneath it (generous holds)
-      tl.from("#mess-line1", { opacity: 0, y: 40, duration: 0.5, ease: "power3.out" }, 4.4);
-      tl.from("#mess-line2", { opacity: 0, y: 26, duration: 0.45, ease: "power3.out" }, 6.6);
-      tl.to("#mess-inner", { opacity: 0, y: -34, duration: 0.5, ease: "power2.in" }, 11.9);
-      tl.set("#mess-inner", { opacity: 0 }, 12.6);
+      tl.to("#mn1", { opacity: 1, duration: 0.14 }, 0.35);
+      tl.to("#mn2", { opacity: 1, duration: 0.14 }, 0.6);
+      tl.to("#mn3", { opacity: 1, duration: 0.14 }, 0.85);
+      tl.to("#mn4", { opacity: 1, duration: 0.14 }, 1.1);
+      tl.to("#mn5", { opacity: 1, duration: 0.14 }, 1.35);
+      tl.to("#mn6", { opacity: 1, duration: 0.14 }, 1.6);
+      tl.to("#mn7", { opacity: 1, duration: 0.14 }, 1.85);
+      // framing lines land quickly beneath the log
+      tl.from("#mess-line1", { opacity: 0, y: 40, duration: 0.45, ease: "power3.out" }, 2.4);
+      tl.from("#mess-line2", { opacity: 0, y: 26, duration: 0.4, ease: "power3.out" }, 4.3);
+      tl.to("#mess-inner", { opacity: 0, y: -34, duration: 0.45, ease: "power2.in" }, 7.35);
+      tl.set("#mess-inner", { opacity: 0 }, 8.0);
 
-      /* ============ scene 2: any note + command palette (12.6-17.4) ============ */
-      tl.from("#palwrap", { opacity: 0, y: 30, duration: 0.45, ease: "power3.out" }, 12.75);
-      tl.from("#pal-caption", { opacity: 0, y: 16, duration: 0.35, ease: "power2.out" }, 13.0);
-      tl.to("#pal-cursor", { opacity: 0.15, duration: 0.4, yoyo: true, repeat: 2, ease: "steps(1)" }, 12.9);
-      tl.set("#chip-ctrlp", { opacity: 1 }, 13.6); tl.set("#chip-ctrlp", { opacity: 0 }, 14.1);
-      tl.to("#palette", { opacity: 1, duration: 0.22, ease: "power2.out" }, 13.95);
-      tl.from("#palette", { y: -14, duration: 0.22, ease: "power2.out" }, 13.95);
-      tl.set("#pal-ph", { opacity: 0 }, 14.45);
-      tl.set("#pal-caret-pre", { opacity: 0 }, 14.45);
-      tl.set("#pal-typed .ch", { opacity: 1, stagger: 0.12 }, 14.45);
-      tl.set("#pal-caret", { opacity: 1 }, 14.85);
-      tl.to(".pal-dim", { opacity: 0.3, duration: 0.25 }, 15.0);
-      tl.set("#chip-enter", { opacity: 1 }, 16.0); tl.set("#chip-enter", { opacity: 0 }, 16.5);
-      tl.to("#palette", { opacity: 0, y: -8, duration: 0.25, ease: "power2.in" }, 16.45);
-      tl.to("#palwrap", { opacity: 0, y: -24, duration: 0.3, ease: "power2.in" }, 16.8);
-      tl.to("#pal-caption", { opacity: 0, duration: 0.25 }, 16.8);
-      tl.set("#palwrap", { opacity: 0 }, 17.4);
-      tl.set("#pal-caption", { opacity: 0 }, 17.4);
+      /* ============ scene 2: any note + command palette (8.0-12.8) ============ */
+      tl.from("#palwrap", { opacity: 0, y: 30, duration: 0.45, ease: "power3.out" }, 8.15);
+      tl.from("#pal-caption", { opacity: 0, y: 16, duration: 0.35, ease: "power2.out" }, 8.4);
+      tl.to("#pal-cursor", { opacity: 0.15, duration: 0.4, yoyo: true, repeat: 2, ease: "steps(1)" }, 8.3);
+      tl.set("#chip-ctrlp", { opacity: 1 }, 9.0); tl.set("#chip-ctrlp", { opacity: 0 }, 9.5);
+      tl.to("#palette", { opacity: 1, duration: 0.22, ease: "power2.out" }, 9.35);
+      tl.from("#palette", { y: -14, duration: 0.22, ease: "power2.out" }, 9.35);
+      tl.set("#pal-ph", { opacity: 0 }, 9.85);
+      tl.set("#pal-caret-pre", { opacity: 0 }, 9.85);
+      tl.set("#pal-typed .ch", { opacity: 1, stagger: 0.12 }, 9.85);
+      tl.set("#pal-caret", { opacity: 1 }, 10.25);
+      tl.to(".pal-dim", { opacity: 0.3, duration: 0.25 }, 10.4);
+      tl.set("#chip-enter", { opacity: 1 }, 11.4); tl.set("#chip-enter", { opacity: 0 }, 11.9);
+      tl.to("#palette", { opacity: 0, y: -8, duration: 0.25, ease: "power2.in" }, 11.85);
+      tl.to("#palwrap", { opacity: 0, y: -24, duration: 0.3, ease: "power2.in" }, 12.2);
+      tl.to("#pal-caption", { opacity: 0, duration: 0.25 }, 12.2);
+      tl.set("#palwrap", { opacity: 0 }, 12.8);
+      tl.set("#pal-caption", { opacity: 0 }, 12.8);
 
-      /* ============ scene 3: the answer + the flow (17.4-35.0) ============ */
-      tl.from("#demo-title", { opacity: 0, y: -28, duration: 0.5, ease: "power3.out" }, 17.6);
-      tl.from("#modal", { opacity: 0, y: 84, duration: 0.55, ease: "power3.out" }, 18.0);
-      tl.to("#modal-glow", { opacity: 0.55, scale: 1.05, duration: 1.3, yoyo: true, repeat: 9, ease: "sine.inOut" }, 18.0);
-      tl.to("#time-hint", { opacity: 1, duration: 0.35 }, 18.5);
-      tl.set("#time-ring", { opacity: 1 }, 18.1);
+      /* ============ scene 3: the answer + the flow (12.8-30.4) ============ */
+      tl.from("#demo-title", { opacity: 0, y: -28, duration: 0.5, ease: "power3.out" }, 13.0);
+      tl.from("#modal", { opacity: 0, y: 84, duration: 0.55, ease: "power3.out" }, 13.4);
+      tl.to("#modal-glow", { opacity: 0.55, scale: 1.05, duration: 1.3, yoyo: true, repeat: 9, ease: "sine.inOut" }, 13.4);
+      tl.to("#time-hint", { opacity: 1, duration: 0.35 }, 13.9);
+      tl.set("#time-ring", { opacity: 1 }, 13.5);
       // --- time-stepping demo (slowed so each key + change is readable) ---
-      tl.set("#tv-1152", { opacity: 0 }, 19.2); tl.set("#tv-1153", { opacity: 1 }, 19.2);
-      tl.set("#chip-up", { opacity: 1 }, 19.2); tl.set("#chip-up", { opacity: 0 }, 19.62);
-      tl.set("#tv-1153", { opacity: 0 }, 19.8); tl.set("#tv-1154", { opacity: 1 }, 19.8);
-      tl.set("#chip-up", { opacity: 1 }, 19.8); tl.set("#chip-up", { opacity: 0 }, 20.22);
-      tl.set("#tv-1154", { opacity: 0 }, 20.4); tl.set("#tv-1204", { opacity: 1 }, 20.4);
-      tl.set("#chip-shup", { opacity: 1 }, 20.4); tl.set("#chip-shup", { opacity: 0 }, 20.88);
-      tl.set("#tv-1204", { opacity: 0 }, 21.1); tl.set("#tv-1154", { opacity: 1 }, 21.1);
-      tl.set("#chip-shdown", { opacity: 1 }, 21.1); tl.set("#chip-shdown", { opacity: 0 }, 21.58);
-      tl.set("#tv-1154", { opacity: 0 }, 21.8); tl.set("#tv-1153", { opacity: 1 }, 21.8);
-      tl.set("#chip-down", { opacity: 1 }, 21.8); tl.set("#chip-down", { opacity: 0 }, 22.22);
-      tl.set("#tv-1153", { opacity: 0 }, 22.4); tl.set("#tv-1152", { opacity: 1 }, 22.4);
-      tl.set("#chip-down", { opacity: 1 }, 22.4); tl.set("#chip-down", { opacity: 0 }, 22.82);
+      tl.set("#tv-1152", { opacity: 0 }, 14.6); tl.set("#tv-1153", { opacity: 1 }, 14.6);
+      tl.set("#chip-up", { opacity: 1 }, 14.6); tl.set("#chip-up", { opacity: 0 }, 15.02);
+      tl.set("#tv-1153", { opacity: 0 }, 15.2); tl.set("#tv-1154", { opacity: 1 }, 15.2);
+      tl.set("#chip-up", { opacity: 1 }, 15.2); tl.set("#chip-up", { opacity: 0 }, 15.62);
+      tl.set("#tv-1154", { opacity: 0 }, 15.8); tl.set("#tv-1204", { opacity: 1 }, 15.8);
+      tl.set("#chip-shup", { opacity: 1 }, 15.8); tl.set("#chip-shup", { opacity: 0 }, 16.28);
+      tl.set("#tv-1204", { opacity: 0 }, 16.5); tl.set("#tv-1154", { opacity: 1 }, 16.5);
+      tl.set("#chip-shdown", { opacity: 1 }, 16.5); tl.set("#chip-shdown", { opacity: 0 }, 16.98);
+      tl.set("#tv-1154", { opacity: 0 }, 17.2); tl.set("#tv-1153", { opacity: 1 }, 17.2);
+      tl.set("#chip-down", { opacity: 1 }, 17.2); tl.set("#chip-down", { opacity: 0 }, 17.62);
+      tl.set("#tv-1153", { opacity: 0 }, 17.8); tl.set("#tv-1152", { opacity: 1 }, 17.8);
+      tl.set("#chip-down", { opacity: 1 }, 17.8); tl.set("#chip-down", { opacity: 0 }, 18.22);
       // Tab -> location field gains focus, caret waits at the left edge
-      tl.set("#chip-tab", { opacity: 1 }, 22.95); tl.set("#chip-tab", { opacity: 0 }, 23.4);
-      tl.set("#time-ring", { opacity: 0 }, 22.95);
-      tl.set("#loc-ring", { opacity: 1 }, 22.95);
-      tl.set("#loc-caret-pre", { opacity: 1 }, 22.95);
+      tl.set("#chip-tab", { opacity: 1 }, 18.35); tl.set("#chip-tab", { opacity: 0 }, 18.8);
+      tl.set("#time-ring", { opacity: 0 }, 18.35);
+      tl.set("#loc-ring", { opacity: 1 }, 18.35);
+      tl.set("#loc-caret-pre", { opacity: 1 }, 18.35);
       // type "jet"
-      tl.set("#loc-caret-pre", { opacity: 0 }, 23.5);
-      tl.set("#loc-typed .ch", { opacity: 1, stagger: 0.12 }, 23.5);
-      tl.set("#loc-caret", { opacity: 1 }, 23.9);
-      tl.to("#loc-dd", { opacity: 1, duration: 0.22, ease: "power2.out" }, 24.1);
-      tl.from("#loc-dd", { y: 10, duration: 0.22, ease: "power2.out" }, 24.1);
+      tl.set("#loc-caret-pre", { opacity: 0 }, 18.9);
+      tl.set("#loc-typed .ch", { opacity: 1, stagger: 0.12 }, 18.9);
+      tl.set("#loc-caret", { opacity: 1 }, 19.3);
+      tl.to("#loc-dd", { opacity: 1, duration: 0.22, ease: "power2.out" }, 19.5);
+      tl.from("#loc-dd", { y: 10, duration: 0.22, ease: "power2.out" }, 19.5);
       // side note 1 (locations)
-      tl.to("#sn-loc", { opacity: 1, duration: 0.35, ease: "power2.out" }, 24.5);
-      tl.from("#sn-loc", { x: 18, duration: 0.35, ease: "power2.out" }, 24.5);
+      tl.to("#sn-loc", { opacity: 1, duration: 0.35, ease: "power2.out" }, 19.9);
+      tl.from("#sn-loc", { x: 18, duration: 0.35, ease: "power2.out" }, 19.9);
       // Enter: accept JettyNorth
-      tl.set("#loc-typed", { opacity: 0 }, 25.4);
-      tl.set("#loc-fill", { opacity: 1 }, 25.4);
-      tl.to("#loc-dd", { opacity: 0, y: -6, duration: 0.22, ease: "power2.in" }, 25.42);
-      tl.set("#loc-caret", { opacity: 0 }, 25.4);
+      tl.set("#loc-typed", { opacity: 0 }, 20.8);
+      tl.set("#loc-fill", { opacity: 1 }, 20.8);
+      tl.to("#loc-dd", { opacity: 0, y: -6, duration: 0.22, ease: "power2.in" }, 20.82);
+      tl.set("#loc-caret", { opacity: 0 }, 20.8);
       // focus moves to note field
-      tl.set("#loc-ring", { opacity: 0 }, 25.6);
-      tl.set("#note-ring", { opacity: 1 }, 25.6);
-      tl.set("#note-ph", { opacity: 0 }, 25.6);
-      tl.set("#note-caret-pre", { opacity: 1 }, 25.6);
+      tl.set("#loc-ring", { opacity: 0 }, 21.0);
+      tl.set("#note-ring", { opacity: 1 }, 21.0);
+      tl.set("#note-ph", { opacity: 0 }, 21.0);
+      tl.set("#note-caret-pre", { opacity: 1 }, 21.0);
       // type "wat"
-      tl.set("#note-caret-pre", { opacity: 0 }, 26.3);
-      tl.set("#note-typed .ch", { opacity: 1, stagger: 0.12 }, 26.3);
-      tl.set("#note-caret", { opacity: 1 }, 26.7);
-      tl.to("#note-dd", { opacity: 1, duration: 0.22, ease: "power2.out" }, 26.9);
-      tl.from("#note-dd", { y: 10, duration: 0.22, ease: "power2.out" }, 26.9);
+      tl.set("#note-caret-pre", { opacity: 0 }, 21.7);
+      tl.set("#note-typed .ch", { opacity: 1, stagger: 0.12 }, 21.7);
+      tl.set("#note-caret", { opacity: 1 }, 22.1);
+      tl.to("#note-dd", { opacity: 1, duration: 0.22, ease: "power2.out" }, 22.3);
+      tl.from("#note-dd", { y: 10, duration: 0.22, ease: "power2.out" }, 22.3);
       // side note 2 (history)
-      tl.to("#sn-note", { opacity: 1, duration: 0.35, ease: "power2.out" }, 27.3);
-      tl.from("#sn-note", { x: 18, duration: 0.35, ease: "power2.out" }, 27.3);
+      tl.to("#sn-note", { opacity: 1, duration: 0.35, ease: "power2.out" }, 22.7);
+      tl.from("#sn-note", { x: 18, duration: 0.35, ease: "power2.out" }, 22.7);
       // Enter: accept the suggestion
-      tl.set("#note-typed", { opacity: 0 }, 28.1);
-      tl.set("#note-fill", { opacity: 1 }, 28.1);
-      tl.to("#note-dd", { opacity: 0, y: -6, duration: 0.22, ease: "power2.in" }, 28.12);
-      tl.set("#note-caret", { opacity: 0 }, 28.1);
+      tl.set("#note-typed", { opacity: 0 }, 23.5);
+      tl.set("#note-fill", { opacity: 1 }, 23.5);
+      tl.to("#note-dd", { opacity: 0, y: -6, duration: 0.22, ease: "power2.in" }, 23.52);
+      tl.set("#note-caret", { opacity: 0 }, 23.5);
       // value caption (autocomplete keeps it fast)
-      tl.fromTo("#demo-caption", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 28.4);
+      tl.fromTo("#demo-caption", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 23.8);
       // hold for reading the side notes + caption, then dip to payoff
-      tl.to("#sidenote", { opacity: 0, duration: 0.35, ease: "power2.in" }, 31.5);
-      tl.to("#demo-caption", { opacity: 0, duration: 0.3, ease: "power2.in" }, 31.5);
-      tl.to("#modal-wrap", { opacity: 0, y: 44, duration: 0.4, ease: "power2.in" }, 31.5);
-      tl.to("#demo-title", { opacity: 0, duration: 0.3 }, 31.5);
-      tl.to("#notepanel", { opacity: 1, duration: 0.4, ease: "power2.out" }, 31.85);
-      tl.from("#notecard", { y: 46, duration: 0.45, ease: "power3.out" }, 31.85);
+      tl.to("#sidenote", { opacity: 0, duration: 0.35, ease: "power2.in" }, 26.9);
+      tl.to("#demo-caption", { opacity: 0, duration: 0.3, ease: "power2.in" }, 26.9);
+      tl.to("#modal-wrap", { opacity: 0, y: 44, duration: 0.4, ease: "power2.in" }, 26.9);
+      tl.to("#demo-title", { opacity: 0, duration: 0.3 }, 26.9);
+      tl.to("#notepanel", { opacity: 1, duration: 0.4, ease: "power2.out" }, 27.25);
+      tl.from("#notecard", { y: 46, duration: 0.45, ease: "power3.out" }, 27.25);
       // the entry line writes itself
-      tl.set("#entry-line .ch", { opacity: 1, stagger: 0.022 }, 32.1);
+      tl.set("#entry-line .ch", { opacity: 1, stagger: 0.022 }, 27.5);
       // tag pill glows once as the line lands
-      tl.to("#pill-glow", { opacity: 0.9, duration: 0.28, ease: "power2.out" }, 33.05);
-      tl.to("#pill-glow", { opacity: 0, duration: 0.6, ease: "power2.in" }, 33.4);
+      tl.to("#pill-glow", { opacity: 0.9, duration: 0.28, ease: "power2.out" }, 28.45);
+      tl.to("#pill-glow", { opacity: 0, duration: 0.6, ease: "power2.in" }, 28.8);
 
-      /* ============ scene 4: find it later (35.0-41.0) ============ */
-      tl.from("#searchcard", { opacity: 0, y: 40, duration: 0.4, ease: "power3.out" }, 35.1);
-      tl.set("#q-caret-pre", { opacity: 1 }, 35.15);
-      tl.set("#q-caret-pre", { opacity: 0 }, 35.4);
-      tl.set("#q-typed .ch", { opacity: 1, stagger: 0.08 }, 35.4);
-      tl.set("#q-caret", { opacity: 1 }, 36.3);
-      tl.to("#q-caret", { opacity: 0, duration: 0.45, yoyo: true, repeat: 4, ease: "steps(1)" }, 36.35);
+      /* ============ scene 3b: on your phone (30.4-38.6) ============ */
+      tl.from("#phone-wrap", { opacity: 0, y: 70, duration: 0.5, ease: "power3.out" }, 30.55);
+      tl.fromTo("#mob-l1", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 30.8);
+      tl.fromTo("#mob-l2", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 31.5);
+      // swipe down on the note -> quick actions
+      tl.set("#touch-dot", { x: 154, y: 150, scale: 1, opacity: 0 }, 32.0);
+      tl.to("#touch-dot", { opacity: 1, duration: 0.12 }, 32.0);
+      tl.to("#touch-dot", { y: 320, duration: 0.45, ease: "power2.out" }, 32.1);
+      tl.to("#touch-dot", { opacity: 0, duration: 0.18 }, 32.55);
+      tl.to("#ph-palette", { opacity: 1, duration: 0.22, ease: "power2.out" }, 32.45);
+      tl.from("#ph-palette", { y: -16, duration: 0.22, ease: "power2.out" }, 32.45);
+      // tap the command
+      tl.set("#touch-dot", { x: 154, y: 112, scale: 1 }, 33.3);
+      tl.to("#touch-dot", { opacity: 1, scale: 0.82, duration: 0.14, ease: "power2.out" }, 33.3);
+      tl.to("#touch-dot", { opacity: 0, scale: 1, duration: 0.2 }, 33.5);
+      tl.to("#ph-palette", { opacity: 0, y: -10, duration: 0.22, ease: "power2.in" }, 33.65);
+      // entry modal pops in, time prefilled
+      tl.to("#ph-modal", { opacity: 1, duration: 0.28, ease: "power3.out" }, 33.95);
+      tl.from("#ph-modal", { y: 36, duration: 0.32, ease: "power3.out" }, 33.95);
+      // tap the location field -> suggestions
+      tl.set("#touch-dot", { x: 154, y: 366, scale: 1 }, 34.5);
+      tl.to("#touch-dot", { opacity: 1, scale: 0.82, duration: 0.14, ease: "power2.out" }, 34.5);
+      tl.to("#touch-dot", { opacity: 0, scale: 1, duration: 0.2 }, 34.7);
+      tl.to("#ph-dd", { opacity: 1, duration: 0.2, ease: "power2.out" }, 34.75);
+      tl.from("#ph-dd", { y: 8, duration: 0.2, ease: "power2.out" }, 34.75);
+      // tap JettyNorth
+      tl.set("#touch-dot", { x: 154, y: 416, scale: 1 }, 35.3);
+      tl.to("#touch-dot", { opacity: 1, scale: 0.82, duration: 0.14, ease: "power2.out" }, 35.3);
+      tl.to("#touch-dot", { opacity: 0, scale: 1, duration: 0.2 }, 35.5);
+      tl.to("#ph-dd", { opacity: 0, duration: 0.18, ease: "power2.in" }, 35.5);
+      tl.set("#ph-loc-ph", { opacity: 0 }, 35.5);
+      tl.set("#ph-loc-fill", { opacity: 1 }, 35.5);
+      // tap the note field -> history suggestion
+      tl.set("#touch-dot", { x: 154, y: 455, scale: 1 }, 35.9);
+      tl.to("#touch-dot", { opacity: 1, scale: 0.82, duration: 0.14, ease: "power2.out" }, 35.9);
+      tl.to("#touch-dot", { opacity: 0, scale: 1, duration: 0.2 }, 36.1);
+      tl.to("#ph-ndd", { opacity: 1, duration: 0.2, ease: "power2.out" }, 36.15);
+      tl.from("#ph-ndd", { y: 8, duration: 0.2, ease: "power2.out" }, 36.15);
+      // tap "Water sample taken"
+      tl.set("#touch-dot", { x: 154, y: 504, scale: 1 }, 36.7);
+      tl.to("#touch-dot", { opacity: 1, scale: 0.82, duration: 0.14, ease: "power2.out" }, 36.7);
+      tl.to("#touch-dot", { opacity: 0, scale: 1, duration: 0.2 }, 36.9);
+      tl.to("#ph-ndd", { opacity: 0, duration: 0.18, ease: "power2.in" }, 36.9);
+      tl.set("#ph-note-ph", { opacity: 0 }, 36.9);
+      tl.set("#ph-note-fill", { opacity: 1 }, 36.9);
+      // tap Insert entry
+      tl.set("#touch-dot", { x: 154, y: 519, scale: 1 }, 37.4);
+      tl.to("#touch-dot", { opacity: 1, scale: 0.82, duration: 0.14, ease: "power2.out" }, 37.4);
+      tl.to("#touch-dot", { opacity: 0, scale: 1, duration: 0.2 }, 37.6);
+      tl.to("#ph-btn", { scale: 0.96, duration: 0.09, yoyo: true, repeat: 1 }, 37.4);
+      tl.to("#ph-modal", { opacity: 0, y: 30, duration: 0.3, ease: "power2.in" }, 37.7);
+      // the entry lands in the note
+      tl.fromTo("#ph-entry", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" }, 38.0);
+      tl.fromTo("#mob-l3", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 38.2);
+      // scene exit
+      tl.to("#mob-left", { opacity: 0, y: -26, duration: 0.4, ease: "power2.in" }, 39.7);
+      tl.to("#phone-wrap", { opacity: 0, y: -26, duration: 0.4, ease: "power2.in" }, 39.7);
+
+      /* ============ scene 4: find it later (40.2-46.2) ============ */
+      tl.from("#searchcard", { opacity: 0, y: 40, duration: 0.4, ease: "power3.out" }, 40.3);
+      tl.set("#q-caret-pre", { opacity: 1 }, 40.35);
+      tl.set("#q-caret-pre", { opacity: 0 }, 40.6);
+      tl.set("#q-typed .ch", { opacity: 1, stagger: 0.08 }, 40.6);
+      tl.set("#q-caret", { opacity: 1 }, 41.5);
+      tl.to("#q-caret", { opacity: 0, duration: 0.45, yoyo: true, repeat: 4, ease: "steps(1)" }, 41.55);
       // result rows arrive one per ~second (readable)
-      tl.to("#row1", { opacity: 1, duration: 0.3, ease: "power2.out" }, 36.6);
-      tl.from("#row1", { y: 14, duration: 0.3, ease: "power2.out" }, 36.6);
-      tl.to("#row2", { opacity: 1, duration: 0.3, ease: "power2.out" }, 37.6);
-      tl.from("#row2", { y: 14, duration: 0.3, ease: "power2.out" }, 37.6);
-      tl.to("#row3", { opacity: 1, duration: 0.3, ease: "power2.out" }, 38.6);
-      tl.from("#row3", { y: 14, duration: 0.3, ease: "power2.out" }, 38.6);
-      tl.to("#search-caption", { opacity: 1, duration: 0.4, ease: "power2.out" }, 39.0);
-      tl.from("#search-caption", { y: 18, duration: 0.4, ease: "power2.out" }, 39.0);
+      tl.to("#row1", { opacity: 1, duration: 0.3, ease: "power2.out" }, 41.8);
+      tl.from("#row1", { y: 14, duration: 0.3, ease: "power2.out" }, 41.8);
+      tl.to("#row2", { opacity: 1, duration: 0.3, ease: "power2.out" }, 42.8);
+      tl.from("#row2", { y: 14, duration: 0.3, ease: "power2.out" }, 42.8);
+      tl.to("#row3", { opacity: 1, duration: 0.3, ease: "power2.out" }, 43.8);
+      tl.from("#row3", { y: 14, duration: 0.3, ease: "power2.out" }, 43.8);
+      tl.to("#search-caption", { opacity: 1, duration: 0.4, ease: "power2.out" }, 44.2);
+      tl.from("#search-caption", { y: 18, duration: 0.4, ease: "power2.out" }, 44.2);
 
-      /* ============ scene 5: lockup (41.0-47.5) ============ */
-      tl.fromTo("#hassle", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 41.2);
-      tl.to("#hassle", { opacity: 0, y: -26, duration: 0.4, ease: "power2.in" }, 42.9);
-      tl.fromTo("#thesis", { opacity: 0, y: 34 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 43.2);
-      tl.to("#thesis", { y: -30, scale: 0.82, duration: 0.5, ease: "power2.inOut" }, 45.05);
-      tl.to("#lockup", { opacity: 1, duration: 0.45, ease: "power3.out" }, 45.5);
-      tl.from("#lockup", { y: 30, duration: 0.45, ease: "power3.out" }, 45.5);
-      tl.to("#lockup-glow", { opacity: 0.6, scale: 1.06, duration: 1.1, yoyo: true, repeat: 1, ease: "sine.inOut" }, 45.3);
+      /* ============ scene 5: lockup + install (46.2-55.1) ============ */
+      tl.fromTo("#hassle", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 46.4);
+      tl.to("#hassle", { opacity: 0, y: -26, duration: 0.4, ease: "power2.in" }, 48.1);
+      tl.fromTo("#thesis", { opacity: 0, y: 34 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 48.4);
+      tl.to("#thesis", { y: -30, scale: 0.82, duration: 0.5, ease: "power2.inOut" }, 50.25);
+      tl.to("#lockup", { opacity: 1, duration: 0.45, ease: "power3.out" }, 50.7);
+      tl.from("#lockup", { y: 30, duration: 0.45, ease: "power3.out" }, 50.7);
+      tl.to("#lockup-glow", { opacity: 0.6, scale: 1.06, duration: 1.1, yoyo: true, repeat: 3, ease: "sine.inOut" }, 50.5);
+      // install line + platform icons
+      tl.fromTo("#store-line", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 51.5);
+      tl.fromTo("#pi-win", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2)" }, 51.95);
+      tl.fromTo("#pi-linux", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2)" }, 52.07);
+      tl.fromTo("#pi-apple", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2)" }, 52.19);
+      tl.fromTo("#pi-android", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2)" }, 52.31);
 
       /* ============ music arc ============ */
       // low bed under the problem, opens with the solution, ducks under typing, fades under the logo
       tl.set("#bgm", { volume: 0 }, 0);
       tl.to("#bgm", { volume: 0.22, duration: 0.5, ease: "power1.out" }, 0.05);
-      tl.to("#bgm", { volume: 0.34, duration: 0.7, ease: "power1.inOut" }, 12.6);
-      tl.to("#bgm", { volume: 0.27, duration: 0.5, ease: "power1.inOut" }, 19.0);
-      tl.to("#bgm", { volume: 0.34, duration: 0.6, ease: "power1.inOut" }, 31.5);
-      tl.to("#bgm", { volume: 0.12, duration: 0.4, ease: "power1.in" }, 45.8);
-      tl.to("#bgm", { volume: 0, duration: 0.5, ease: "power1.in" }, 46.6);
+      tl.to("#bgm", { volume: 0.34, duration: 0.7, ease: "power1.inOut" }, 8.0);
+      tl.to("#bgm", { volume: 0.27, duration: 0.5, ease: "power1.inOut" }, 14.4);
+      tl.to("#bgm", { volume: 0.34, duration: 0.6, ease: "power1.inOut" }, 26.9);
+      tl.to("#bgm", { volume: 0.12, duration: 0.5, ease: "power1.in" }, 53.2);
+      tl.to("#bgm", { volume: 0, duration: 0.6, ease: "power1.in" }, 54.1);
 
       window.__timelines["main"] = tl;
     </script>
