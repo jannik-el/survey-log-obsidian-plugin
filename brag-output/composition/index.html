@@ -104,77 +104,6 @@
         color: #8ed7db;
         text-shadow: 0 4px 44px rgba(0, 0, 0, 0.92);
       }
-
-      /* ---------- scene 1: water wave washes over ---------- */
-      #wave {
-        position: absolute;
-        inset: 0;
-        overflow: hidden;
-        opacity: 0;
-        z-index: 30;
-        pointer-events: none;
-      }
-      #water {
-        position: absolute;
-        left: 0;
-        width: 1920px;
-        bottom: 0;
-        height: 1500px;
-        will-change: transform;
-      }
-      .w-svg, #w-foam {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 3840px;
-        height: 320px;
-      }
-      #w-main path { fill: rgba(17, 157, 164, 0.82); }
-      #w-back path { fill: rgba(12, 80, 91, 0.66); }
-      #w-foam { top: -8px; filter: blur(3px); }
-      #w-foam path { fill: none; stroke: rgba(232, 240, 236, 0.82); stroke-width: 9; }
-      .w-body {
-        position: absolute;
-        top: 250px;
-        left: 0;
-        width: 100%;
-        height: 1300px;
-        background: linear-gradient(180deg, rgba(17, 157, 164, 0.86) 0%, rgba(12, 116, 137, 0.9) 34%, rgba(19, 80, 91, 0.94) 70%, rgba(9, 44, 52, 0.96) 100%);
-      }
-      .w-sheen {
-        position: absolute;
-        top: 290px;
-        left: 0;
-        width: 100%;
-        height: 620px;
-        background: linear-gradient(112deg, transparent 0%, rgba(206, 244, 244, 0.10) 38%, transparent 54%, rgba(206, 244, 244, 0.06) 76%, transparent 100%);
-      }
-      #water-tint {
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(180deg, rgba(15, 72, 84, 0.78), rgba(9, 44, 52, 0.96));
-        opacity: 0;
-      }
-      .drop {
-        position: absolute;
-        top: 360px;
-        width: 20px;
-        height: 26px;
-        border-radius: 60% 60% 55% 55% / 70% 70% 45% 45%;
-        background: radial-gradient(circle at 40% 30%, rgba(232, 244, 242, 0.95), rgba(96, 200, 206, 0.85) 55%, rgba(17, 157, 164, 0.7) 100%);
-        opacity: 0;
-        z-index: 32;
-      }
-      .lens-drop {
-        position: absolute;
-        border-radius: 50% 50% 55% 55% / 60% 60% 48% 48%;
-        background: radial-gradient(circle at 38% 30%, rgba(235, 245, 243, 0.5), rgba(120, 205, 210, 0.28) 60%, rgba(17, 157, 164, 0.16) 100%);
-        filter: blur(1.5px);
-        opacity: 0;
-        z-index: 34;
-        box-shadow: inset 0 -6px 12px rgba(255, 255, 255, 0.22), inset 0 5px 9px rgba(9, 44, 52, 0.4);
-      }
-
       /* ---------- scenes 2+3: demo ---------- */
       #demo-title {
         position: absolute;
@@ -772,30 +701,6 @@
             <div id="mess-line2">Things get messy fast &mdash; and rarely searchable later.</div>
           </div>
         </div>
-
-        <div id="wave" data-layout-ignore>
-          <div id="water">
-            <svg class="w-svg" id="w-back" viewBox="0 0 3840 360" preserveAspectRatio="none"><path d="M0,221.8 L0,221.8 L30,223.7 L60,223.8 L90,221.9 L120,218.3 L150,212.9 L180,206.1 L210,198.2 L240,189.4 L270,180.3 L300,171.1 L330,162.4 L360,154.4 L390,147.5 L420,142.0 L450,138.2 L480,136.3 L510,136.2 L540,138.1 L570,141.7 L600,147.1 L630,153.9 L660,161.8 L690,170.6 L720,179.7 L750,188.9 L780,197.6 L810,205.6 L840,212.5 L870,218.0 L900,221.8 L930,223.7 L960,223.8 L990,221.9 L1020,218.3 L1050,212.9 L1080,206.1 L1110,198.2 L1140,189.4 L1170,180.3 L1200,171.1 L1230,162.4 L1260,154.4 L1290,147.5 L1320,142.0 L1350,138.2 L1380,136.3 L1410,136.2 L1440,138.1 L1470,141.7 L1500,147.1 L1530,153.9 L1560,161.8 L1590,170.6 L1620,179.7 L1650,188.9 L1680,197.6 L1710,205.6 L1740,212.5 L1770,218.0 L1800,221.8 L1830,223.7 L1860,223.8 L1890,221.9 L1920,218.3 L1950,212.9 L1980,206.1 L2010,198.2 L2040,189.4 L2070,180.3 L2100,171.1 L2130,162.4 L2160,154.4 L2190,147.5 L2220,142.0 L2250,138.2 L2280,136.3 L2310,136.2 L2340,138.1 L2370,141.7 L2400,147.1 L2430,153.9 L2460,161.8 L2490,170.6 L2520,179.7 L2550,188.9 L2580,197.6 L2610,205.6 L2640,212.5 L2670,218.0 L2700,221.8 L2730,223.7 L2760,223.8 L2790,221.9 L2820,218.3 L2850,212.9 L2880,206.1 L2910,198.2 L2940,189.4 L2970,180.3 L3000,171.1 L3030,162.4 L3060,154.4 L3090,147.5 L3120,142.0 L3150,138.2 L3180,136.3 L3210,136.2 L3240,138.1 L3270,141.7 L3300,147.1 L3330,153.9 L3360,161.8 L3390,170.6 L3420,179.7 L3450,188.9 L3480,197.6 L3510,205.6 L3540,212.5 L3570,218.0 L3600,221.8 L3630,223.7 L3660,223.8 L3690,221.9 L3720,218.3 L3750,212.9 L3780,206.1 L3810,198.2 L3840,189.4 L3840,360 L0,360 Z"/></svg>
-            <svg class="w-svg" id="w-main" viewBox="0 0 3840 360" preserveAspectRatio="none"><path d="M0,150.0 L0,150.0 L30,164.7 L60,178.6 L90,190.6 L120,200.2 L150,206.7 L180,209.8 L210,209.2 L240,204.9 L270,197.3 L300,186.9 L330,174.1 L360,159.9 L390,145.0 L420,130.5 L450,117.2 L480,105.9 L510,97.2 L540,91.8 L570,90.0 L600,91.8 L630,97.2 L660,105.9 L690,117.2 L720,130.5 L750,145.0 L780,159.9 L810,174.1 L840,186.9 L870,197.3 L900,204.9 L930,209.2 L960,209.8 L990,206.7 L1020,200.2 L1050,190.6 L1080,178.6 L1110,164.7 L1140,150.0 L1170,135.3 L1200,121.4 L1230,109.4 L1260,99.8 L1290,93.3 L1320,90.2 L1350,90.8 L1380,95.1 L1410,102.7 L1440,113.1 L1470,125.9 L1500,140.1 L1530,155.0 L1560,169.5 L1590,182.8 L1620,194.1 L1650,202.8 L1680,208.2 L1710,210.0 L1740,208.2 L1770,202.8 L1800,194.1 L1830,182.8 L1860,169.5 L1890,155.0 L1920,140.1 L1950,125.9 L1980,113.1 L2010,102.7 L2040,95.1 L2070,90.8 L2100,90.2 L2130,93.3 L2160,99.8 L2190,109.4 L2220,121.4 L2250,135.3 L2280,150.0 L2310,164.7 L2340,178.6 L2370,190.6 L2400,200.2 L2430,206.7 L2460,209.8 L2490,209.2 L2520,204.9 L2550,197.3 L2580,186.9 L2610,174.1 L2640,159.9 L2670,145.0 L2700,130.5 L2730,117.2 L2760,105.9 L2790,97.2 L2820,91.8 L2850,90.0 L2880,91.8 L2910,97.2 L2940,105.9 L2970,117.2 L3000,130.5 L3030,145.0 L3060,159.9 L3090,174.1 L3120,186.9 L3150,197.3 L3180,204.9 L3210,209.2 L3240,209.8 L3270,206.7 L3300,200.2 L3330,190.6 L3360,178.6 L3390,164.7 L3420,150.0 L3450,135.3 L3480,121.4 L3510,109.4 L3540,99.8 L3570,93.3 L3600,90.2 L3630,90.8 L3660,95.1 L3690,102.7 L3720,113.1 L3750,125.9 L3780,140.1 L3810,155.0 L3840,169.5 L3840,360 L0,360 Z"/></svg>
-            <div class="w-body"></div>
-            <div class="w-sheen"></div>
-            <svg id="w-foam" viewBox="0 0 3840 360" preserveAspectRatio="none"><path d="M0,150.0 L0,150.0 L30,164.7 L60,178.6 L90,190.6 L120,200.2 L150,206.7 L180,209.8 L210,209.2 L240,204.9 L270,197.3 L300,186.9 L330,174.1 L360,159.9 L390,145.0 L420,130.5 L450,117.2 L480,105.9 L510,97.2 L540,91.8 L570,90.0 L600,91.8 L630,97.2 L660,105.9 L690,117.2 L720,130.5 L750,145.0 L780,159.9 L810,174.1 L840,186.9 L870,197.3 L900,204.9 L930,209.2 L960,209.8 L990,206.7 L1020,200.2 L1050,190.6 L1080,178.6 L1110,164.7 L1140,150.0 L1170,135.3 L1200,121.4 L1230,109.4 L1260,99.8 L1290,93.3 L1320,90.2 L1350,90.8 L1380,95.1 L1410,102.7 L1440,113.1 L1470,125.9 L1500,140.1 L1530,155.0 L1560,169.5 L1590,182.8 L1620,194.1 L1650,202.8 L1680,208.2 L1710,210.0 L1740,208.2 L1770,202.8 L1800,194.1 L1830,182.8 L1860,169.5 L1890,155.0 L1920,140.1 L1950,125.9 L1980,113.1 L2010,102.7 L2040,95.1 L2070,90.8 L2100,90.2 L2130,93.3 L2160,99.8 L2190,109.4 L2220,121.4 L2250,135.3 L2280,150.0 L2310,164.7 L2340,178.6 L2370,190.6 L2400,200.2 L2430,206.7 L2460,209.8 L2490,209.2 L2520,204.9 L2550,197.3 L2580,186.9 L2610,174.1 L2640,159.9 L2670,145.0 L2700,130.5 L2730,117.2 L2760,105.9 L2790,97.2 L2820,91.8 L2850,90.0 L2880,91.8 L2910,97.2 L2940,105.9 L2970,117.2 L3000,130.5 L3030,145.0 L3060,159.9 L3090,174.1 L3120,186.9 L3150,197.3 L3180,204.9 L3210,209.2 L3240,209.8 L3270,206.7 L3300,200.2 L3330,190.6 L3360,178.6 L3390,164.7 L3420,150.0 L3450,135.3 L3480,121.4 L3510,109.4 L3540,99.8 L3570,93.3 L3600,90.2 L3630,90.8 L3660,95.1 L3690,102.7 L3720,113.1 L3750,125.9 L3780,140.1 L3810,155.0 L3840,169.5"/></svg>
-          </div>
-          <div id="water-tint"></div>
-          <span class="drop" id="drop0" style="left: 220px"></span>
-          <span class="drop" id="drop1" style="left: 420px; width: 26px; height: 34px"></span>
-          <span class="drop" id="drop2" style="left: 560px; width: 15px; height: 20px"></span>
-          <span class="drop" id="drop3" style="left: 720px; width: 22px; height: 29px"></span>
-          <span class="drop" id="drop4" style="left: 880px; width: 28px; height: 36px"></span>
-          <span class="drop" id="drop5" style="left: 1020px; width: 16px; height: 21px"></span>
-          <span class="drop" id="drop6" style="left: 1200px; width: 23px; height: 30px"></span>
-          <span class="drop" id="drop7" style="left: 1360px; width: 18px; height: 24px"></span>
-          <span class="drop" id="drop8" style="left: 1520px; width: 26px; height: 33px"></span>
-          <span class="drop" id="drop9" style="left: 1680px; width: 15px; height: 20px"></span>
-          <div class="lens-drop" id="ld0" style="left: 540px; top: 250px; width: 72px; height: 94px"></div>
-          <div class="lens-drop" id="ld1" style="left: 1180px; top: 180px; width: 52px; height: 70px"></div>
-          <div class="lens-drop" id="ld2" style="left: 900px; top: 350px; width: 40px; height: 54px"></div>
-        </div>
       </div>
 
       <!-- scene 2: any note + command palette -->
@@ -1010,9 +915,6 @@
       <audio id="sfx-m7" src="assets/sfx/keypress-003.wav" data-start="1.85" data-duration="0.5" data-track-index="17" data-volume="0.4"></audio>
       <audio id="sfx-mline1" src="assets/sfx/impactSoft_medium_001.ogg" data-start="2.4" data-duration="0.6" data-track-index="18" data-volume="0.5"></audio>
       <audio id="sfx-mline2" src="assets/sfx/impactSoft_medium_004.ogg" data-start="4.3" data-duration="0.6" data-track-index="19" data-volume="0.55"></audio>
-      <!-- the wave -->
-      <audio id="sfx-wave" src="assets/sfx/wave-splash.wav" data-start="5.8" data-duration="2.26" data-track-index="80" data-volume="0.62"></audio>
-      <audio id="sfx-wave-body" src="assets/sfx/impactSoft_medium_003.ogg" data-start="6.35" data-duration="0.6" data-track-index="81" data-volume="0.5"></audio>
 
       <!-- scene 2 -->
       <audio id="sfx-ctrlp" src="assets/sfx/keypress-002.wav" data-start="9.0" data-duration="0.5" data-track-index="20" data-volume="0.55"></audio>
@@ -1091,42 +993,7 @@
       // framing lines land quickly beneath the log
       tl.from("#mess-line1", { opacity: 0, y: 40, duration: 0.45, ease: "power3.out" }, 2.4);
       tl.from("#mess-line2", { opacity: 0, y: 26, duration: 0.4, ease: "power3.out" }, 4.3);
-      // ---- a wave crashes over the mess (5.8-8.0) ----
-      tl.set("#wave", { opacity: 1 }, 5.8);
-      tl.set("#water", { y: 1500 }, 5.8);
-      tl.set("#w-main", { x: 0 }, 5.8);
-      tl.set("#w-foam", { x: 0 }, 5.8);
-      tl.set("#w-back", { x: -240 }, 5.8);
-      tl.to("#water", { y: 0, duration: 0.85, ease: "power2.out" }, 5.85);
-      tl.to("#w-main", { x: -1180, duration: 2.0, ease: "none" }, 5.85);
-      tl.to("#w-foam", { x: -1180, duration: 2.0, ease: "none" }, 5.85);
-      tl.to("#w-back", { x: -1620, duration: 2.0, ease: "none" }, 5.85);
-      // the log card gets shoved as the water hits
-      tl.to("#messnote", { y: 34, rotation: -1.6, duration: 0.5, ease: "power2.in" }, 6.12);
-      // splash droplets burst off the crest
-      var _drops = [[-130,-250,0.74],[95,-330,0.86],[-70,-200,0.66],[150,-290,0.80],[-190,-360,0.92],[45,-230,0.70],[120,-300,0.82],[-95,-260,0.72],[175,-340,0.88],[-45,-190,0.64]];
-      _drops.forEach(function (v, i) {
-        var id = "#drop" + i, dx = v[0], pk = v[1], du = v[2], t = 6.12 + (i % 5) * 0.02;
-        tl.set(id, { opacity: 0, x: 0, y: 0 }, 5.8);
-        tl.to(id, { opacity: 1, duration: 0.07 }, t);
-        tl.to(id, { y: pk, x: dx, duration: du * 0.5, ease: "power2.out" }, t);
-        tl.to(id, { y: 130, x: dx * 1.7, duration: du * 0.62, ease: "power2.in" }, t + du * 0.5);
-        tl.to(id, { opacity: 0, duration: 0.3, ease: "power1.in" }, t + du * 0.72);
-        tl.set(id, { opacity: 0 }, 8.0);
-      });
-      // droplets stick to the lens and slide down (breaking the 4th wall)
-      tl.fromTo("#ld0", { opacity: 0, scale: 0.7, y: -12 }, { opacity: 0.55, scale: 1, y: 0, duration: 0.16, ease: "power2.out" }, 6.3);
-      tl.to("#ld0", { y: 210, opacity: 0, duration: 1.15, ease: "power1.in" }, 6.5);
-      tl.fromTo("#ld1", { opacity: 0, scale: 0.7, y: -12 }, { opacity: 0.5, scale: 1, y: 0, duration: 0.16, ease: "power2.out" }, 6.36);
-      tl.to("#ld1", { y: 260, opacity: 0, duration: 1.2, ease: "power1.in" }, 6.58);
-      tl.fromTo("#ld2", { opacity: 0, scale: 0.7, y: -12 }, { opacity: 0.5, scale: 1, y: 0, duration: 0.16, ease: "power2.out" }, 6.42);
-      tl.to("#ld2", { y: 190, opacity: 0, duration: 1.05, ease: "power1.in" }, 6.62);
-      // everything submerges, then the water drains away to reveal the clean tool
-      tl.to("#water-tint", { opacity: 0.92, duration: 0.55, ease: "power1.out" }, 6.3);
-      tl.to("#mess-inner", { opacity: 0, duration: 0.45, ease: "power1.in" }, 6.35);
-      tl.to("#water", { y: 1500, duration: 1.15, ease: "power1.in" }, 6.8);
-      tl.to("#water-tint", { opacity: 0, duration: 0.8, ease: "power1.in" }, 6.8);
-      tl.set("#wave", { opacity: 0 }, 8.0);
+      tl.to("#mess-inner", { opacity: 0, y: -34, duration: 0.45, ease: "power2.in" }, 7.35);
       tl.set("#mess-inner", { opacity: 0 }, 8.0);
 
       /* ============ scene 2: any note + command palette (8.0-12.8) ============ */
